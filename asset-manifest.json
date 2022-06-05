@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "static/css/main.08b7c95b.css",
+    "main.js": "static/js/main.ee2ccd37.js",
+    "static/js/787.c6738f25.chunk.js": "static/js/787.c6738f25.chunk.js",
+    "static/media/contact.jpg": "static/media/contact.46057e8f30e65692aa71.jpg",
+    "static/media/main.jpg": "static/media/main.d66dba55989b83284f26.jpg",
+    "static/media/location.jpg": "static/media/location.f0e4dc5eb15f00220e5f.jpg",
+    "static/media/dogwalker-bg.jpg": "static/media/dogwalker-bg.3f788324c1d09e465fff.jpg",
+    "static/media/price.jpg": "static/media/price.584343bfd1e9ac88ac31.jpg",
+    "static/media/about.jpg": "static/media/about.22fa4a6d565fdeb4e0cc.jpg",
+    "static/media/logo2.png": "static/media/logo2.d90a1d119823ec86986c.png",
+    "index.html": "index.html",
+    "main.08b7c95b.css.map": "static/css/main.08b7c95b.css.map",
+    "main.ee2ccd37.js.map": "static/js/main.ee2ccd37.js.map",
+    "787.c6738f25.chunk.js.map": "static/js/787.c6738f25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08b7c95b.css",
+    "static/js/main.ee2ccd37.js"
+  ]
+}
