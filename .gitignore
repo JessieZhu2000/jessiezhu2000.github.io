@@ -1,0 +1,15 @@
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+package-lock.json
+*.lock
+
+node_modules
+bower_components
+
+.idea/*
+/node_modules/

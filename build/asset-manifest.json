@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72663244.css",
+    "main.js": "/static/js/main.85c285cf.js",
+    "static/js/787.c6738f25.chunk.js": "/static/js/787.c6738f25.chunk.js",
+    "static/media/fee.jpg": "/static/media/fee.551a2352577f8eb99b0b.jpg",
+    "static/media/booking.jpg": "/static/media/booking.46057e8f30e65692aa71.jpg",
+    "static/media/main.jpg": "/static/media/main.d66dba55989b83284f26.jpg",
+    "static/media/location.jpg": "/static/media/location.f0e4dc5eb15f00220e5f.jpg",
+    "static/media/job.jpg": "/static/media/job.584343bfd1e9ac88ac31.jpg",
+    "static/media/about.jpg": "/static/media/about.22fa4a6d565fdeb4e0cc.jpg",
+    "static/media/logo.png": "/static/media/logo.d90a1d119823ec86986c.png",
+    "index.html": "/index.html",
+    "main.72663244.css.map": "/static/css/main.72663244.css.map",
+    "main.85c285cf.js.map": "/static/js/main.85c285cf.js.map",
+    "787.c6738f25.chunk.js.map": "/static/js/787.c6738f25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72663244.css",
+    "static/js/main.85c285cf.js"
+  ]
+}
