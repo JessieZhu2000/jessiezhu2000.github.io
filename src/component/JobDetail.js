@@ -10,7 +10,7 @@ export const JobDetail = () => {
                 Please reach out to us if you have passion for dogs and would like to join a winning team!
             </h2>
             <h2>
-                We will guide you on obtain the insurance and DBS check.
+                We will guide you to obtain the necessary paperwork.
             </h2>
             <h2>
                 After the basic training, you can start to earn a commission straight away!
