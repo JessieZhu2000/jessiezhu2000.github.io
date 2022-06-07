@@ -7,3 +7,4 @@
   Location map
   web access count
   SEO
+  GA

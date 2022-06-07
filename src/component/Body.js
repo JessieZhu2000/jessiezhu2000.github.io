@@ -1,6 +1,7 @@
-import { Detail } from "./Detail";
+import React from "react"
+import Detail from "./Detail";
 
-export const Body = ({ show, bgImg }) => {
+export default ({ show, bgImg }) => {
   return (
     <>
       <div className="bgImg" style={{

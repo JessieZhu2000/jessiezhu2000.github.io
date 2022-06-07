@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-export const LocationDetail = () => {
+export default () => {
     return (
         <>
             <div className='locationDetail'>

@@ -1,7 +1,8 @@
+import React from "react"
 import { BsTelephoneFill } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 
-export const ContactDetail = () => {
+export default () => {
     return (
         <>
             <div className="contactDetail">
@@ -18,7 +19,7 @@ export const ContactDetail = () => {
                     <h3>07960482002</h3></div>
                 <div className='contactEmail'>
                     <MdOutlineEmail />
-                    <i class="fa fa-envelope"></i>
+                    <i className="fa fa-envelope"></i>
                     <h3>
                         <a className="mail" href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">dogwalkerclubs@gmail.com</a>
                     </h3>

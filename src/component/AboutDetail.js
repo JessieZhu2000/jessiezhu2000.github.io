@@ -1,5 +1,6 @@
+import React from 'react'
 
-export const AboutDetail = () => {
+export default () => {
     return (
         <div className='about'>
             <h1>Welcome to Dogwalker Clubs</h1>

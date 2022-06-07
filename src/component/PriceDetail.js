@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-export const PriceDetail = () => {
+export default () => {
     return (
         <div className='priceDiv'>
             <table className='priceDetail'>

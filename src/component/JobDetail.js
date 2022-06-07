@@ -1,5 +1,6 @@
+import React from "react"
 
-export const JobDetail = () => {
+export default () => {
     return (
         <div className='about'>
             <h1>Become a dog walker</h1>

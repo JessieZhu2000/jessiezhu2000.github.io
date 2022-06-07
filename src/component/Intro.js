@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Intro = () => {
+export default () => {
   return (
     <div className='intro'>
       <p> &#10003; Happy dog equals happy owner</p>
