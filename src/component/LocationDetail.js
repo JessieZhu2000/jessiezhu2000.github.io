@@ -1,5 +1,7 @@
 import React from "react"
 
+import '../css/LocationDetail.css'
+
 export default () => {
     return (
         <>
@@ -34,6 +36,7 @@ export default () => {
                     </tbody>
                 </table>
                 <h5>* Some area will be subject to distance charge.</h5>
+                <h5>* Contact us if your area is not listed above.</h5>
             </div>
         </>
     )

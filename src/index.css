@@ -5,10 +5,6 @@
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -41,19 +37,24 @@ body {
 }
 
 .img {
-  padding-left: 10px;
+  border:#e79216;
+  border-radius: 5pc;
+  margin-left: 30px;
+  padding-top: 5px;
+  padding-left: 5px;
   width: 150px;
   height: 150px;
 }
 
 .button {
   color: #2d2928;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   text-transform: uppercase;
+  font-weight: 800;
   cursor: pointer;
   background: none;
-  height: 80%;
+  height: 100%;
   align-items: center;
   text-align: left;
 }
@@ -66,190 +67,7 @@ body {
   font-size: 16px;
 }
 
-
-.intro {
-  border-radius: 5px;
-  opacity: 1;
-  text-align: center;
-  width: 100%;
-  height: 400px;
-  width: 100%;
-  padding-left: 50px;
-  clear: both;
-  background-color: #ebedf0;
-  overflow: hidden;
-  background-size: cover;
-}
-
-.intro p {
-  color: #2d2928;
-  font-size: 28px;
-}
-
-/* about detail */
-.about {
-  width: 100%;
-  padding-left: 50px;
-  clear: both;
-  background-color: #ebedf0;
-  overflow: hidden;
-  background-size: cover;
-}
-
-.about h1 {
-  width: 90%;
-  z-index: 0;
-  margin: 3% auto;
-  color: #555;
-  z-index: 0;
-  font-size: 18px;
-}
-
-.about h2 {
-  width: 90%;
-  color: #555;
-  margin: 2% auto;
-  font-size: 14px;
-}
-
-/*location detail */
-.locationDetail {
-  width: 100%;
-  padding-left: 50px;
-  clear: both;
-  background-color: #ebedf0;
-  border-bottom: solid #d7d9dc 1px;
-  overflow: hidden;
-  background-size: cover;
-}
-
-.locationDetail h2 {
-  text-align: center;
-  font-size: 18px;
-}
-
-.locationDetail table {
-  width: 90%;
-  margin: 20px;
-  table-layout: fixed;
-}
-
-.locationDetail tbody td {
-  color: #e79216;
-  background-color: #2d2928;
-  padding: 20px;
-  margin: 20px;
-  font-size: 14px;
-}
-
-/* price detail */
-
-.priceDiv {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
-
-.priceDetail {
-  width: 100%;
-  table-layout: fixed;
-  font-size: 14px;
-}
-
-.priceDetail th {
-  padding: 15px;
-  background-color: #2d2928;
-  color: white;
-}
-
-.priceDetail td {
-  padding: 10px;
-}
-
-.priceDetail button {
-  color: #2d2928;
-  font-size: 14px;
-  padding: 5px;
-  margin: auto;
-  border: none;
-}
-
-.priceDetail button:hover {
-  font-weight: bold;
-}
-
-.priceDetail tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.priceDetail tr:hover {
-  background-color: #ddd;
-}
-
-
-/* Contact detail */
-.contactDetail {
-
-  display: grid;
-  height: auto;
-  background-color: #ebedf0;
-  overflow: hidden;
-  background-size: cover;
-  gap: 1px;
-  grid-template-areas:
-    'header header header header'
-    'question question question phone '
-    'question question question email';
-}
-
-.contactDetail h2 {
-  grid-area: header;
-  text-align: center;
-  font-weight: 100;
-  font-size: 18px;
-}
-
-.contactDetail .questionList {
-  grid-area: question;
-  text-align: left;
-  margin-left: 10%;
-  font-size: 20px;
-
-}
-
-li {
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.contactDetail .contactPhone {
-  grid-area: phone;
-  display: flex;
-}
-
-.contactDetail .contactEmail {
-  grid-area: email;
-  display: flex;
-}
-
-h4 {
-  margin-top: -1px;
-}
-
-a:link {
-  color: #2d2928;
-}
-
-a:hover {
-  color: #e79216;
-}
-
-a:active {
-  color: blue;
-}
-
 /* Footer */
-/*   header  */
 .footer {
   height: 5vh;
   background-color: #ebedf0;
@@ -259,7 +77,7 @@ a:active {
   padding-top: 10px;
   margin-top: 15px;
   border-top: solid #555 1px;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -302,112 +120,6 @@ a:active {
     color: aqua;
   }
 
-  .intro {
-    border-radius: 5px;
-    opacity: 1;
-    text-align: center;
-    width: 100%;
-    height: 400px;
-    width: 100%;
-    padding-left: 50px;
-    clear: both;
-    background-color: #ebedf0;
-    overflow: hidden;
-    background-size: cover;
-  }
+  
 
-  .intro p {
-    color: #2d2928;
-    font-size: 28px;
-  }
-
-  .contactDetail {
-    display: grid;
-    height: auto;
-    background-color: #ebedf0;
-    overflow: hidden;
-    background-size: cover;
-    grid-template-areas:
-      'header header header'
-      'menu  menu phone'
-      'menu  menu email'
-
-  }
-
-  .contactDetail h2 {
-    grid-area: header;
-    text-align: center;
-  }
-
-  .contactDetail .questionList {
-    width: 80%;
-    grid-area: menu;
-    text-align: left;
-    margin-left: 10%;
-    font-size: 20px;
-  }
-
-  li {
-    margin: 10px;
-  }
-
-  .contactDetail .contactPhone {
-    grid-area: phone;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  .contactDetail .contactEmail {
-    margin-left: 10%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-area: email;
-  }
-
-  h4 {
-    margin-top: -1px;
-  }
-
-  .about h1 {
-    width: 80%;
-    z-index: 0;
-    margin: 3% auto;
-    color: #555;
-    z-index: 0;
-    font-size: 22px;
-  }
-
-  .about h2 {
-    width: 80%;
-    color: #555;
-    margin: 2% auto;
-    font-size: 18px;
-  }
-
-  .locationDetail tbody td {
-    color: #e79216;
-    background-color: #2d2928;
-    padding: 20px;
-    margin: 20px;
-    font-size: 20px;
-  }
-
-  .priceDetail {
-    width: 100%;
-    table-layout: fixed;
-    font-size: 20px;
-  }
-
-  .priceDetail button {
-    color: #2d2928;
-    font-size: 20px;
-    padding: 5px;
-    margin: auto;
-    border: none;
-  }
-
-  .locationDetail h2 {
-    text-align: center;
-    font-size: 1.5em;
-  }
 }

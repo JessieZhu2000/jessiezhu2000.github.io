@@ -8,11 +8,7 @@ import FeesButton from "./component/FeesButton";
 import JobButton from "./component/JobButton";
 import BookingButton from "./component/BookingButton";
 
-import useWindowSize from "./userWindowSize";
-
 export default () => {
-
-  const { width } = useWindowSize();
 
   return (
     <>

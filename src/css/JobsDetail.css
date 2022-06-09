@@ -1,0 +1,43 @@
+.jobs {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ebedf0;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.jobs h1 {
+    width: 90%;
+    z-index: 0;
+    margin: 3% auto;
+    color: #555;
+    z-index: 0;
+    font-size: 18px;
+}
+
+.jobs h2 {
+    width: 90%;
+    color: #555;
+    margin: 2% auto;
+    font-size: 14px;
+}
+
+/* desktop screen */
+@media only screen and (min-width: 800px) {
+    .jobs h1 {
+        width: 80%;
+        z-index: 0;
+        margin: 3% auto;
+        color: #555;
+        z-index: 0;
+        font-size: 22px;
+    }
+
+    .jobs h2 {
+        width: 80%;
+        color: #555;
+        margin: 2% auto;
+        font-size: 18px;
+    }
+}

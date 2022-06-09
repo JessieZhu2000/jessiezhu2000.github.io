@@ -1,0 +1,83 @@
+/* price detail */
+
+.priceDiv {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.priceDetail {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 14px;
+}
+
+.priceDetail th {
+    padding: 15px;
+    background-color: #2d2928;
+    color: white;
+}
+
+.priceDetail td {
+    padding: 10px;
+}
+
+.priceDetail button {
+    color: #2d2928;
+    font-weight: bold;
+    background-color: #e79216;
+    font-size: 14px;
+    padding: 5px;
+    border: 20px;
+    border-radius: 45px;
+}
+
+.priceDetail button:hover {
+    font-weight: bold;
+    color: white;
+    background-color: #2d2928;
+}
+
+.priceDetail tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.priceDetail tr:hover {
+    background-color: #ddd;
+}
+
+.priceDetail a {
+    text-decoration: none;
+}
+
+.priceDetail a.link {
+    color: #2d2928;
+    text-decoration: none;
+}
+
+.priceDetail a:hover {
+    color: #e79216;
+    text-decoration: none;
+}
+
+.priceDetail a:active {
+    color: blue;
+    text-decoration: none;
+}
+
+/* desktop screen */
+@media only screen and (min-width: 800px) {
+    .priceDetail {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 20px;
+    }
+
+    .priceDetail button {
+        color: #2d2928;
+        font-size: 20px;
+        padding: 5px;
+        margin: auto;
+        border: none;
+    }
+}

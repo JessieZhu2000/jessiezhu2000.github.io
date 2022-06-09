@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../css/Intro.css'
+
 export default () => {
   return (
     <div className='intro'>
