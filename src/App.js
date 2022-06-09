@@ -8,17 +8,25 @@ import FeesButton from "./component/FeesButton";
 import JobButton from "./component/JobButton";
 import BookingButton from "./component/BookingButton";
 
+import useWindowSize from "./userWindowSize";
+
 export default () => {
+
+  const { width } = useWindowSize();
+
   return (
-   <>
-        <nav className="header">
+    <>
+      <nav className="header">
+
         <Link to="/"><img src={Logo} className="img" alt="" /></Link>
-        <Link to="/About"><AboutButton /></Link>
-        <Link to="/Location"><LocationButton /></Link>
-        <Link to="/Fees"><FeesButton /></Link>
-        <Link to="/Jobs"><JobButton /></Link>
-        <Link to="/Booking"><BookingButton /></Link>
+        <div className="buttonGroup"><Link to="/About"><AboutButton /></Link>
+          <Link to="/Location"><LocationButton /></Link>
+          <Link to="/Fees"><FeesButton /></Link>
+          <Link to="/Jobs"><JobButton /></Link> 
+          <Link to="/Booking"><BookingButton /></Link>
+        </div>
       </nav>
       <Outlet />
     </>
-  )}
+  )
+}

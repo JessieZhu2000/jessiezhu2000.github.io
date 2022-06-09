@@ -16,13 +16,13 @@ export default () => {
                 </div>
                 <div className='contactPhone'>
                     <BsTelephoneFill />
-                    <h3>07960482002</h3></div>
+                    <h4>07960482002</h4>
+                </div>
                 <div className='contactEmail'>
                     <MdOutlineEmail />
-                    <i className="fa fa-envelope"></i>
-                    <h3>
+                    <h4>
                         <a className="mail" href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">dogwalkerclubs@gmail.com</a>
-                    </h3>
+                    </h4>
                 </div>
             </div>
         </>
