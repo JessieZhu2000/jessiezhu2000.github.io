@@ -29,9 +29,9 @@ root.render(
           <Route
             path="*"
             element={
-              <main style={{ padding: "1rem" }}>
-                <p>No page found!</p>
-              </main>
+              <div className="noPage">
+                <p>Ops, no page found! Please click the logo to main page!</p>
+              </div>
             }
             onEnter={reload} 
           />

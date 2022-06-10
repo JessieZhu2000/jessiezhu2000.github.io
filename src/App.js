@@ -14,7 +14,7 @@ export default () => {
     <>
       <nav className="header">
 
-        <Link to="/"><img src={Logo} className="img" alt="" /></Link>
+        <Link to="/"><img src={Logo} className="img" alt="Dogwalker Clubs" /></Link>
         <div className="buttonGroup"><Link to="/About"><AboutButton /></Link>
           <Link to="/Location"><LocationButton /></Link>
           <Link to="/Fees"><FeesButton /></Link>

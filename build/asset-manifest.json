@@ -1,7 +1,7 @@
 {
   "main.css": "/static/css/main.9ceab549.chunk.css",
-  "main.js": "/static/js/main.696e5c6e.chunk.js",
-  "main.js.map": "/static/js/main.696e5c6e.chunk.js.map",
+  "main.js": "/static/js/main.eedac111.chunk.js",
+  "main.js.map": "/static/js/main.eedac111.chunk.js.map",
   "static/js/1.4bb05d8f.chunk.js": "/static/js/1.4bb05d8f.chunk.js",
   "static/js/1.4bb05d8f.chunk.js.map": "/static/js/1.4bb05d8f.chunk.js.map",
   "static/js/2.8325b50e.chunk.js": "/static/js/2.8325b50e.chunk.js",
@@ -17,6 +17,6 @@
   "static/media/booking.jpg": "/static/media/booking.499f15ca.jpg",
   "static/css/main.9ceab549.chunk.css.map": "/static/css/main.9ceab549.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.57e3224bd86d7beed4192426a9434202.js": "/precache-manifest.57e3224bd86d7beed4192426a9434202.js",
+  "precache-manifest.7e7881f344c20035c9e770c843660dad.js": "/precache-manifest.7e7881f344c20035c9e770c843660dad.js",
   "service-worker.js": "/service-worker.js"
 }

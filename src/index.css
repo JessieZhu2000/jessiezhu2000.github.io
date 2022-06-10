@@ -25,17 +25,6 @@ body {
   border-bottom: #f3c009fc outset 10px;
 }
 
-.buttonGroup {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-/* body */
-.bgImg {
-  height: 300px;
-  background-repeat: no-repeat;
-}
-
 .img {
   border: #e79216;
   border-radius: 5pc;
@@ -45,6 +34,19 @@ body {
   width: 150px;
   height: 150px;
 }
+
+.buttonGroup {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: -80px;
+}
+
+/* body */
+.bgImg {
+  height: 300px;
+  background-repeat: no-repeat;
+}
+
 
 .button {
   color: #2d2928;
@@ -92,6 +94,14 @@ body {
   border-top: solid #555 1px;
   font-size: 14px;
   text-align: center;
+}
+
+.noPage {
+  color:#2d2928;
+  font-size: 18px;
+  padding: 1rem;
+  background-color: #e79216;
+  height: 100%;
 }
 
 /* desktop screen */
