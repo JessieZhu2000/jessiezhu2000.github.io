@@ -20,6 +20,7 @@ export default () => {
           <Link to="/Fees"><FeesButton /></Link>
           <Link to="/Jobs"><JobButton /></Link> 
           <Link to="/Booking"><BookingButton /></Link>
+          <button className="buttonPhone">07960482002</button>
         </div>
       </nav>
       <Outlet />
