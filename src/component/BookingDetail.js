@@ -17,7 +17,7 @@ export default () => {
                 </div>
                 <div className='contactPhone'>
                     <BsTelephoneFill />
-                    <h4>07960482002</h4>
+                    <h4>07960 482 002</h4>
                 </div>
                 <div className='contactEmail'>
                     <MdOutlineEmail />
