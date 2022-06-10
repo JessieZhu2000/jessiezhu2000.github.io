@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "0c98b59018c2f5e6d4f4",
+    "revision": "696e5c6ee4fb1449eb52",
     "url": "/static/css/main.9ceab549.chunk.css"
   },
   {
-    "revision": "0c98b59018c2f5e6d4f4",
-    "url": "/static/js/main.0c98b590.chunk.js"
+    "revision": "696e5c6ee4fb1449eb52",
+    "url": "/static/js/main.696e5c6e.chunk.js"
   },
   {
-    "revision": "e7e0e04a5ea3842eb42e",
-    "url": "/static/js/1.e7e0e04a.chunk.js"
+    "revision": "4bb05d8fed1e4d6e8559",
+    "url": "/static/js/1.4bb05d8f.chunk.js"
   },
   {
     "revision": "8325b50ebc5fab580408",
     "url": "/static/js/2.8325b50e.chunk.js"
   },
   {
-    "revision": "6a4751f849122296e7c6",
-    "url": "/static/js/runtime~main.6a4751f8.js"
+    "revision": "7af4db86e54e523836d2",
+    "url": "/static/js/runtime~main.7af4db86.js"
   },
   {
     "revision": "855161fc24961728a21c1a791349b06a",
@@ -48,11 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/booking.499f15ca.jpg"
   },
   {
-    "revision": "098c1b300ecc22db4db41a126a54dc39",
-    "url": "/static/media/sitemap.098c1b30.txt"
-  },
-  {
-    "revision": "98c73780b91638e8a6436c364e152f1e",
+    "revision": "15ebf19495ce56eb3b1282b1c40a3759",
     "url": "/index.html"
   }
 ];
