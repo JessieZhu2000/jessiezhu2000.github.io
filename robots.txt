@@ -1,0 +1,6 @@
+Sitemap: https://dogwalkerclubs.co.uk/sitemap.txt
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

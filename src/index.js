@@ -15,6 +15,7 @@ import Jobs from './pages/Jobs';
 import Booking from './pages/Booking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <BrowserRouter>
     <Routes>
@@ -25,6 +26,8 @@ root.render(
           <Route path="Fees" element={<Fees />} />
           <Route path="Jobs" element={<Jobs />} />
           <Route path="Booking" element={<Booking />} />
+          <Route path="/sitemap.txt" />
+          <Route onEnter={() => window.location.reload()} />
           <Route
             path="*"
             element={
