@@ -38,7 +38,7 @@ body {
 .buttonGroup {
   display: grid;
   grid-template-columns: auto auto;
-  margin-left: -40px;
+  margin-left: -20px;
 }
 
 /* body */
