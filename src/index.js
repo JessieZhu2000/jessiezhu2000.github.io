@@ -13,9 +13,10 @@ import Location from './pages/Location';
 import Fees from './pages/Fees';
 import Jobs from './pages/Jobs';
 import Booking from './pages/Booking';
+import sitemap from './sitemap.txt'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const reload = () => window.location.reload();
 root.render(
   <BrowserRouter>
     <Routes>
@@ -26,13 +27,12 @@ root.render(
           <Route path="Fees" element={<Fees />} />
           <Route path="Jobs" element={<Jobs />} />
           <Route path="Booking" element={<Booking />} />
-          <Route path="/sitemap.txt" />
-          <Route onEnter={() => window.location.reload()} />
+          <Route onEnter={reload} />
           <Route
             path="*"
             element={
               <main style={{ padding: "1rem" }}>
-                <p>In Index, else route</p>
+                <p>No page found!</p>
               </main>
             }
           />
