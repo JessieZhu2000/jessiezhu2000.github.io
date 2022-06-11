@@ -15,17 +15,16 @@ import Jobs from './pages/Jobs';
 import Booking from './pages/Booking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const reload = () => window.location.reload();
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} onEnter={reload} >
-          <Route index element={<Home />} onEnter={reload} />
-          <Route path="About" element={<About />} onEnter={reload} />
-          <Route path="Location" element={<Location />} onEnter={reload} />
-          <Route path="Fees" element={<Fees />} onEnter={reload} />
-          <Route path="Jobs" element={<Jobs />} onEnter={reload} />
-          <Route path="Booking" element={<Booking />} onEnter={reload} />
+      <Route path="/" element={<App />} onEnter={() => window.location.reload()} >
+          <Route index element={<Home />} onEnter={() => window.location.reload()} />
+          <Route path="About" element={<About />} onEnter={() => window.location.reload()} />
+          <Route path="Location" element={<Location />} onEnter={() => window.location.reload()} />
+          <Route path="Fees" element={<Fees />} onEnter={() => window.location.reload()} />
+          <Route path="Jobs" element={<Jobs />} onEnter={() => window.location.reload()} />
+          <Route path="Booking" element={<Booking />} onEnter={() => window.location.reload()} />
           <Route
             path="*"
             element={
@@ -33,7 +32,7 @@ root.render(
                 <p>Ops, no page found! Please click the logo to main page!</p>
               </div>
             }
-            onEnter={reload} 
+            onEnter={() => window.location.reload()} 
           />
         </Route>
     </Routes>
