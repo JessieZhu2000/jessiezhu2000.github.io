@@ -28,7 +28,7 @@ body {
 .img {
   border: #e79216;
   border-radius: 5pc;
-  margin-left: 30px;
+  margin-left: 20px;
   padding-top: 5px;
   padding-left: 5px;
   width: 150px;
@@ -38,7 +38,7 @@ body {
 .buttonGroup {
   display: grid;
   grid-template-columns: auto auto;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 
 /* body */
