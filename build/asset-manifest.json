@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.445e8c48.chunk.css",
-  "main.js": "/static/js/main.d5851412.chunk.js",
-  "main.js.map": "/static/js/main.d5851412.chunk.js.map",
+  "main.css": "/static/css/main.f5e1acae.chunk.css",
+  "main.js": "/static/js/main.bdc3e64f.chunk.js",
+  "main.js.map": "/static/js/main.bdc3e64f.chunk.js.map",
   "static/js/1.4bb05d8f.chunk.js": "/static/js/1.4bb05d8f.chunk.js",
   "static/js/1.4bb05d8f.chunk.js.map": "/static/js/1.4bb05d8f.chunk.js.map",
   "static/js/2.8325b50e.chunk.js": "/static/js/2.8325b50e.chunk.js",
@@ -15,8 +15,8 @@
   "static/media/fee.jpg": "/static/media/fee.5749c814.jpg",
   "static/media/job.jpg": "/static/media/job.09ee004d.jpg",
   "static/media/booking.jpg": "/static/media/booking.499f15ca.jpg",
-  "static/css/main.445e8c48.chunk.css.map": "/static/css/main.445e8c48.chunk.css.map",
+  "static/css/main.f5e1acae.chunk.css.map": "/static/css/main.f5e1acae.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.7ed39d4eba0292ee781a64100e77128a.js": "/precache-manifest.7ed39d4eba0292ee781a64100e77128a.js",
+  "precache-manifest.fbcbe92246f3b68ac5c0664d95e7ce17.js": "/precache-manifest.fbcbe92246f3b68ac5c0664d95e7ce17.js",
   "service-worker.js": "/service-worker.js"
 }
