@@ -5,6 +5,7 @@ import '../css/Intro.css'
 export default () => {
   return (
     <div className='intro'>
+      <h1> Professional Dog walker / Pet sitter / Pet boarding in Cambridge</h1>
       <p> &#10003; Happy dog equals happy owner</p>
       <p> &#10003; Instant book and confirmation</p>
        <p> &#10003; Fully insured and DBS checked</p>

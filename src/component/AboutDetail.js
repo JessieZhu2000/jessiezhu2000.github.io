@@ -6,7 +6,7 @@ export default () => {
         <div className='about'>
             <h1>Welcome to Dogwalker Clubs</h1>
             <h2 >
-                Dogwalker Clubs provides fully insuranced, DBS checked and professional dog walking services.
+                Dogwalker Clubs provides fully insuranced, DBS checked and professional dog walking, pet sitting and pet boarding services.
             </h2>
             <h2>
                 We are available seven days a week, including bank holidays at short notice! We offer competitive prices yet we never compromise on our standard!
@@ -16,6 +16,9 @@ export default () => {
             </h2>
             <h2>
                 While we are walking, we will provide you with instant WhatsApp updates and we will provide plenty of exercises, games and socialising time for your dog.
+            </h2>
+             <h2>
+                For pet sitting or pet boarding service, we will provide you WhatsApp updates three times a day.
             </h2>
         </div>
 
