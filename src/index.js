@@ -25,15 +25,7 @@ root.render(
           <Route path="Fees" element={<Fees />} onEnter={() => window.location.reload()} />
           <Route path="Jobs" element={<Jobs />} onEnter={() => window.location.reload()} />
           <Route path="Booking" element={<Booking />} onEnter={() => window.location.reload()} />
-          <Route
-            path="*"
-            element={
-              <div className="noPage">
-                <p>Ops, no page found! Please click the logo to main page!</p>
-              </div>
-            }
-            onEnter={() => window.location.reload()} 
-          />
+          <Route path="/*" element={<App /> } onEnter={() => window.location.reload()} />
         </Route>
     </Routes>
   </BrowserRouter>
