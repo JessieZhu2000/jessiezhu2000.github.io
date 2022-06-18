@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/booking.499f15ca.jpg"
   },
   {
-    "revision": "79e0a24ab7d89b9e284f0e64cfc5e768",
+    "revision": "c1de29bd05bd231b717c8c218e8878af",
     "url": "/index.html"
   }
 ];
