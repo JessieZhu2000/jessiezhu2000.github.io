@@ -8,8 +8,6 @@ import FeesButton from "./component/FeesButton";
 import DogBoardingButton from "./component/DogBoardingButton";
 import BookingButton from "./component/BookingButton";
 
-import { MdOutlineEmail } from 'react-icons/md';
-
 export default () => {
 
   return (
@@ -22,7 +20,7 @@ export default () => {
           <Link to="/Fees"><FeesButton /></Link>
           <Link to="/DogBoarding"><DogBoardingButton /></Link> 
           <Link to="/Booking"><BookingButton /></Link>
-          <button className="buttonPhone">07960 482 002 </button>
+          <button className="buttonPhone">07960 482 002</button>
         </div>
       </nav>
       <Outlet />

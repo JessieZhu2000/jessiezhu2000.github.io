@@ -13,15 +13,12 @@ export default () => {
                     <tr><th>Type</th><th>Duration</th><th>Price</th><th>Action</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Solo dog walk</td><td>30 mins</td><td>£10</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Solo dog walk</td><td>60 mins</td><td>£15</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Solo dog walk</td><td>Mon-Fri, 30 mins everyday</td><td>£40</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Solo dog walk</td><td>Mon-Fri, 60 mins everyday</td><td>£60</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Group(max 4) dog walk</td><td>60 mins</td><td>£12 each dog</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Group(max 4) dog walk</td><td>Mon-Fri, 60 mins everyday</td><td>£50 each dog</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>Dog/Cat/Small pet sitter</td><td>per day</td><td>£40</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>pet boarding</td><td>per day</td><td>£40</td><td><button><a href={email}>Book</a></button></td></tr>
-                    <tr><td>on demand pet sitter/boarding</td><td>varies</td><td>varies</td><td><button><a href={email}>Contact</a></button></td></tr>
+                    <tr><td>Dog walking</td><td>60 mins</td><td>£15</td><td><button><a href={email}>Book</a></button></td></tr>
+                    <tr><td>Dog walking weekly</td><td>60 mins Mon-Fri</td><td>£65</td><td><button><a href={email}>Book</a></button></td></tr>
+                    <tr><td>Dog boarding</td><td>per day</td><td>£40</td><td><button><a href={email}>Book</a></button></td></tr>
+                    <tr><td>Cat/small pet visiting</td><td>twice per day</td><td>£30</td><td><button><a href={email}>Book</a></button></td></tr>
+                    <tr><td>Bespoke pet sitting/boarding</td><td>varies</td><td>varies</td><td><button><a href={email}>Contact</a></button></td></tr>
+                    <tr><td>Puppy training</td><td>60 mins</td><td>£20</td><td><button><a href={email}>Contact</a></button></td></tr>
                 </tbody>
             </table>
         </div>

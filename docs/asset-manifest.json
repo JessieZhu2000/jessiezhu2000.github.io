@@ -1,11 +1,11 @@
 {
   "main.css": "/static/css/main.87b08536.chunk.css",
-  "main.js": "/static/js/main.afd2d5cf.chunk.js",
-  "main.js.map": "/static/js/main.afd2d5cf.chunk.js.map",
+  "main.js": "/static/js/main.a89abe90.chunk.js",
+  "main.js.map": "/static/js/main.a89abe90.chunk.js.map",
   "static/js/1.4bb05d8f.chunk.js": "/static/js/1.4bb05d8f.chunk.js",
   "static/js/1.4bb05d8f.chunk.js.map": "/static/js/1.4bb05d8f.chunk.js.map",
-  "static/js/2.46b4b1b0.chunk.js": "/static/js/2.46b4b1b0.chunk.js",
-  "static/js/2.46b4b1b0.chunk.js.map": "/static/js/2.46b4b1b0.chunk.js.map",
+  "static/js/2.8325b50e.chunk.js": "/static/js/2.8325b50e.chunk.js",
+  "static/js/2.8325b50e.chunk.js.map": "/static/js/2.8325b50e.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.7af4db86.js",
   "runtime~main.js.map": "/static/js/runtime~main.7af4db86.js.map",
   "static/media/logo.png": "/static/media/logo.855161fc.png",
@@ -17,6 +17,6 @@
   "static/media/booking.jpg": "/static/media/booking.8f20de9a.jpg",
   "static/css/main.87b08536.chunk.css.map": "/static/css/main.87b08536.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.bee411fbb813312f5abf6d9cbadede9e.js": "/precache-manifest.bee411fbb813312f5abf6d9cbadede9e.js",
+  "precache-manifest.be2098c1265dea8ac57c4501ed5587f5.js": "/precache-manifest.be2098c1265dea8ac57c4501ed5587f5.js",
   "service-worker.js": "/service-worker.js"
 }
