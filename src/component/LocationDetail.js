@@ -6,7 +6,7 @@ export default () => {
     return (
         <>
             <div className='locationDetail'>
-               <h2>We cover the following areas around Cambridge &nbsp;&nbsp;&nbsp;&nbsp;<a href="/Booking">Book Now</a></h2> 
+               <h2>We cover the following areas around Cambridge &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h2> 
                 <table>
                     <tbody>
                         <tr>

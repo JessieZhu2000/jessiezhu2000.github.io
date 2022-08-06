@@ -12,7 +12,7 @@ export default () => {
                 We are available seven days a week, including bank holidays at short notice! We offer competitive prices yet we never compromise on our standard!
             </h2>
             <h2>
-                We offer professional dog walking services in-and-around Cambridgeshire. Please check out <a href="/Location">location</a> page for more details about which areas we operation in.
+                We offer professional dog walking services in-and-around Cambridgeshire. Please check out location page for more details about which areas we operation in.
             </h2>
             <h2>
                 While we are walking, we will provide you with instant WhatsApp updates and we will provide plenty of exercises, games and socialising time for your dog.
@@ -21,7 +21,7 @@ export default () => {
                 For pet sitting or pet boarding service, we will provide you WhatsApp updates three times a day.
             </h2>
             <h2>
-               <a href="/Booking">Book Now</a>
+                <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a>
             </h2>
         </div>
 

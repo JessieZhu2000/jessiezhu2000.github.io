@@ -22,7 +22,7 @@ export default () => {
                &#10003; Plenty of exercise, play time and cuddles!
             </h2>
             <h2>
-                <a href="/Booking">Book Now</a>
+                <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a>
             </h2>
         </div>
     )

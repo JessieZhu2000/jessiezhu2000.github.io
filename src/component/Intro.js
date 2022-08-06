@@ -12,6 +12,7 @@ export default () => {
       <p> &#10003; Pick up and drop off</p>
       <p> &#10003; WhatApp live update</p>
       <p> &#10003; Reliable &#38; Friendly</p>
+      <p><a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></p>
     </div>
   )
 }
