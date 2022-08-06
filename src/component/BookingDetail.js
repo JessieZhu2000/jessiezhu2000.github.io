@@ -9,11 +9,11 @@ export default () => {
             <div className="bookingDetail">
                 <h2>Please include these answers in the booking</h2>
                 <div className="questionList">
-                    <li>your mobile number</li>
-                    <li>your dog breed and name</li>
-                    <li>solo or group walk</li>
-                    <li>pick up address</li>
-                    <li>pick up date and time</li>
+                    <ol>&#10003; Your mobile number</ol>
+                    <ol>&#10003; Your pet breed and name</ol>
+                    <ol>&#10003; Service you need: walking (30 mins or 60 mins) or boarding (specify dates inclusive)</ol>
+                    <ol>&#10003; Pick up address</ol>
+                    <ol>&#10003; Pick up date and time</ol>
                 </div>
                 <div className='contactPhone'>
                     <BsTelephoneFill />

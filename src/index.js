@@ -11,7 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Location from './pages/Location';
 import Fees from './pages/Fees';
-import Jobs from './pages/Jobs';
+import DogBoarding from './pages/DogBoarding';
 import Booking from './pages/Booking';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +23,7 @@ root.render(
           <Route path="About" element={<About />} onEnter={() => window.location.reload()} />
           <Route path="Location" element={<Location />} onEnter={() => window.location.reload()} />
           <Route path="Fees" element={<Fees />} onEnter={() => window.location.reload()} />
-          <Route path="Jobs" element={<Jobs />} onEnter={() => window.location.reload()} />
+          <Route path="DogBoarding" element={<DogBoarding />} onEnter={() => window.location.reload()} />
           <Route path="Booking" element={<Booking />} onEnter={() => window.location.reload()} />
           <Route path="/*" element={<App /> } onEnter={() => window.location.reload()} />
         </Route>
