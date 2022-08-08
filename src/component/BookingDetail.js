@@ -11,7 +11,7 @@ export default () => {
                 <div className="questionList">
                     <ol>&#10003; Your mobile number</ol>
                     <ol>&#10003; Your pet breed and name</ol>
-                    <ol>&#10003; Service you need: walking (30 mins or 60 mins) or boarding (specify dates inclusive)</ol>
+                    <ol>&#10003; Service you need: walking or boarding</ol>
                     <ol>&#10003; Pick up address</ol>
                     <ol>&#10003; Pick up date and time</ol>
                 </div>
