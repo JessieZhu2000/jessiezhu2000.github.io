@@ -1,22 +1,62 @@
 .intro {
-    text-align: center;
+    text-align: left;
     background-color: #ebedf0;
     background: rgba(0, 0, 0, 0.0);
-    text-align: left;
-    padding-top: 20px;
-    padding-left:5%;
-    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 3%;
+    font-size: 18px;
 }
 
 .intro p {
-    padding-top: 20px;
+    margin-top: 50px;
+    text-align: right;
+    padding: 5px;
     color: #efefef;
-    font-size: 30px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .intro p a {
     padding-top: 20px;
     color: #e79216;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
+    font-size: 20px;
+}
+
+ .intro p a {
+     text-align: right;
+     color: #e79216;
+     font-size: 30px;
+     font-weight: bold;
+     padding-bottom: 40px;
+ }
+
+/* desktop screen */
+@media only screen and (min-width: 800px) {
+    .intro {
+            text-align: center;
+            background-color: #ebedf0;
+            background: rgba(0, 0, 0, 0.0);
+            text-align: left;
+            padding-top: 10px;
+            padding-left: 3%;
+            font-size: 22px;
+        }
+    
+        .intro p {
+            text-align: left;
+            padding-top: 15px;
+            color: #efefef;
+            font-size: 22px;
+        }
+
+        .intro p a {
+            color: #e79216;
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 40px;
+        }
+
+
 }

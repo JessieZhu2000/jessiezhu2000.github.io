@@ -4,7 +4,7 @@ import '../css/AboutDetail.css';
 export default () => {
     return (
         <div className='about'>
-            <h1>Welcome to Dogwalker Clubs</h1>
+            <h1>Welcome to Dogwalker Clubs &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h1>
             <h2 >
                 Dogwalker Clubs provides fully insuranced, DBS checked and professional dog walking, pet sitting and pet boarding services.
             </h2>
@@ -19,9 +19,6 @@ export default () => {
             </h2>
              <h2>
                 For pet sitting or pet boarding service, we will provide you WhatsApp updates three times a day.
-            </h2>
-            <h2>
-                <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a>
             </h2>
         </div>
 

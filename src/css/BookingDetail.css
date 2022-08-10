@@ -37,28 +37,31 @@ li {
 .bookingDetail .contactPhone {
     grid-area: phone;
     display: flex;
+    color: #e79216;
 }
 
 .bookingDetail .contactEmail {
     grid-area: email;
     display: flex;
     padding-right:10px;
+    color: #e79216;
 }
 
 h4 {
     margin-top: -1px;
 }
 
-a:link {
-    color: #2d2928;
-}
-
-a:hover {
+.bookingDetail a:link {
     color: #e79216;
 }
 
-a:active {
-    color: #2d2928;
+.bookingDetail a:hover {
+    color: #e79216;
+}
+
+.bookingDetail a:active {
+    color: #e79216;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: 800px) {
@@ -77,6 +80,7 @@ a:active {
     .bookingDetail h2 {
         grid-area: header;
         text-align: center;
+        font-size: 30px;
     }
 
     .bookingDetail .questionList {
@@ -84,19 +88,26 @@ a:active {
         grid-area: menu;
         text-align: left;
         margin-left: 10%;
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .bookingDetail .contactPhone {
+        padding-top: 30px;
         grid-area: phone;
         display: grid;
         grid-template-columns: auto auto;
+        color: #e79216;
+        font-size: 22px;
+        font-weight: 200;
     }
 
     .bookingDetail .contactEmail {
-        margin-left: 10%;
+        padding-left: 50px;
+        grid-area: email;
         display: grid;
         grid-template-columns: auto auto;
-        grid-area: email;
+        color: #e79216;
+        font-size: 22px;
+        font-weight: 200;
     }
 }

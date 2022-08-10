@@ -1,14 +1,13 @@
 .about {
     width: 100%;
-    padding-left: 50px;
+    padding-left: 5%;
     clear: both;
     background-color: #ebedf0;
     overflow: hidden;
     background-size: cover;
 }
 
-.about>h1 {
-    width: 90%;
+.about h1 {
     z-index: 0;
     margin: 3% auto;
     color: #555;
@@ -16,20 +15,20 @@
     font-size: 18px;
 }
 
-.about>h2 {
-    width: 90%;
+.about h2 {
     color: #555;
     margin: 2% auto;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-.about h2 a {
+.about h1 a {
     padding-top: 20px;
     color: #e79216;
     font-weight:400;
 }
 
-.about h2 a:hover{
+.about h1 a:hover{
     padding-top: 20px;
     font-weight: bold;
 }
@@ -42,13 +41,13 @@
         margin: 3% auto;
         color: #555;
         z-index: 0;
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .about h2 {
         width: 80%;
         color: #555;
         margin: 2% auto;
-        font-size: 18px;
+        font-size: 22px;
     }
 }

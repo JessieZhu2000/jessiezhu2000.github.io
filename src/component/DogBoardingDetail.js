@@ -5,7 +5,7 @@ import '../css/DogBoarding.css'
 export default () => {
     return (
         <div className='dogboarding'>
-            <h1>Dog home boarding</h1>
+            <h1>Dog home boarding &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a> </h1>
             <h2>
                 &#10003; Your dog will be looked after in my own home as if it were my own pet. 
             </h2>
@@ -22,7 +22,7 @@ export default () => {
                &#10003; Plenty of exercise, play time and cuddles!
             </h2>
             <h2>
-                <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a>
+              
             </h2>
         </div>
     )

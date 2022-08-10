@@ -54,10 +54,8 @@ body {
 
 /* body */
 .bgImg {
-  height: 100%;
-  vertical-align: middle;
-  background-repeat:repeat;
-  display: inline-block;
+  height: 800px;
+  background-size: 100%;
 }
 
 .button {
@@ -162,8 +160,7 @@ body {
   /* body */
   .bgImg {
     height: 800px;
-    background-repeat: repeat;
-    vertical-align: middle;
+    background-size: cover;
   }
 
 }

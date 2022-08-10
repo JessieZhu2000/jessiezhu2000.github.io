@@ -65,6 +65,18 @@
     text-decoration: none;
 }
 
+a:link {
+    color: #2d2928;
+}
+
+a:hover {
+    color: #e79216;
+}
+
+a:active {
+    color: #2d2928;
+}
+
 /* desktop screen */
 @media only screen and (min-width: 800px) {
     .priceDetail {
@@ -80,4 +92,6 @@
         margin: auto;
         border: none;
     }
+
+        
 }

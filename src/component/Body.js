@@ -6,8 +6,9 @@ export default ({ show, bgImg }) => {
     <>
       <div className="bgImg" style={{
         backgroundImage: `url(${bgImg})`,
-        backgroundSize: '100%',
-        width: '100%'
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
       }}>
       </div>
       <div><Detail show={show} /></div>
