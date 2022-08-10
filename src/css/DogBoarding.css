@@ -23,6 +23,15 @@
     font-size: 14px;
 }
 
+.dogboarding h2 a {
+    color: #e79216;
+    font-weight: 400;
+}
+
+.dogboarding h2 a:hover {
+    font-weight: bold;
+}
+
 /* desktop screen */
 @media only screen and (min-width: 800px) {
     .dogboarding h1 {

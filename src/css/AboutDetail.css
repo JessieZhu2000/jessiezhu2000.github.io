@@ -23,6 +23,17 @@
     font-size: 14px;
 }
 
+.about h2 a {
+    padding-top: 20px;
+    color: #e79216;
+    font-weight:400;
+}
+
+.about h2 a:hover{
+    padding-top: 20px;
+    font-weight: bold;
+}
+
 /* desktop screen */
 @media only screen and (min-width: 800px) {
     .about h1 {

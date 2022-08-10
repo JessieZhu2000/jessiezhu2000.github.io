@@ -9,11 +9,9 @@ import DogBoardingButton from "./component/DogBoardingButton";
 import BookingButton from "./component/BookingButton";
 
 export default () => {
-
   return (
     <>
       <nav className="header">
-
         <Link to="/"><img src={Logo} className="img" alt="Dogwalker Clubs" /></Link>
         <div className="buttonGroup"><Link to="/About"><AboutButton /></Link>
           <Link to="/Location"><LocationButton /></Link>
