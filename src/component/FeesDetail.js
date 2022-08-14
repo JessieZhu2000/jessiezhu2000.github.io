@@ -18,7 +18,6 @@ export default () => {
                     <tr><td>Dog boarding</td><td>per day</td><td>£40</td><td><button><a href={email}>Book</a></button></td></tr>
                     <tr><td>Cat/small pet visiting</td><td>twice per day</td><td>£30</td><td><button><a href={email}>Book</a></button></td></tr>
                     <tr><td>Bespoke pet sitting/boarding</td><td>varies</td><td>varies</td><td><button><a href={email}>Contact</a></button></td></tr>
-                    <tr><td>Puppy training</td><td>60 mins</td><td>£20</td><td><button><a href={email}>Contact</a></button></td></tr>
                 </tbody>
             </table>
         </div>
