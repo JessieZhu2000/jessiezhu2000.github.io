@@ -16,7 +16,7 @@ export default () => {
                &#10003; Live WhatsApp pictures update throughout. You can see your dog anytime during the stay.
             </h2>
             <h2>
-               &#10003; Boarding rate £40 per day is for 12 hours, e.g. drop off at 10am, pickup next day 10am. More than 12 hours, extra day rate will apply. Christmas and bank holiday rate increase. Please book in advance to avoid disappointment!
+               &#10003; Boarding rate £40 per day is for 24 hours, e.g. drop off at 10am, pickup next day 10am. More than 24 hours, extra day rate will apply. Christmas and bank holiday rate increase. Please book in advance to avoid disappointment!
             </h2>
         </div>
     )
