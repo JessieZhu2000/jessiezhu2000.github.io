@@ -16,27 +16,15 @@ export default () => {
                             <td>Great Shelford</td>
                         </tr>
                         <tr>
-                            <td>Barton</td>
-                            <td>Comberton</td>
-                            <td>Toft</td>
-                            <td>Hardwick</td>
-                        </tr>
-                        <tr>
-                            <td>Highfields Caldecote</td>
-                            <td>Cambourne</td>
-                            <td>Madingley</td>
-                            <td>Dry Drayton</td>
-                        </tr>
-                        <tr>
-                            <td>Cherry Hinton</td>
-                            <td>Teversham</td>
-                            <td>Fulbourn</td>
-                            <td>Fen Ditton</td>
+                            <td>Little Shelford</td>
+                            <td>Stapleford</td>
+                            <td>Hauxton</td>
+                            <td>Harston</td>
                         </tr>
                     </tbody>
                 </table>
                 <h5>* Some area will be subject to distance charge.</h5>
-                <h5>* Contact us if your area is not listed above.</h5>
+                <h5>* Contact me if your area is not listed above.</h5>
             </div>
         </>
     )
