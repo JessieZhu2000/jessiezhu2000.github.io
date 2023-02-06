@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e3d3451a92518064ef13",
+    "revision": "95127e8d80270bfc2344",
     "url": "/static/css/main.bc3f4475.chunk.css"
   },
   {
-    "revision": "e3d3451a92518064ef13",
-    "url": "/static/js/main.72cfa3ea.chunk.js"
+    "revision": "95127e8d80270bfc2344",
+    "url": "/static/js/main.c8af198c.chunk.js"
   },
   {
     "revision": "1e271669d559754dd260",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/booking.8f20de9a.jpg"
   },
   {
-    "revision": "e87585033a8f1b51885b7d69f7876ea2",
+    "revision": "47cd01ca1cf93d233af21a2e2d9abfc8",
     "url": "/index.html"
   }
 ];
