@@ -2,6 +2,6 @@ import React from "react"
 
 export default () => {
   return (
-    <div className='footer'><p>Copyright © 2022 Dogwalker Clubs Cambridge</p></div>
+    <div className='footer'><p>Copyright © 2023 Dogwalker Clubs Cambridge</p></div>
   )
 }
