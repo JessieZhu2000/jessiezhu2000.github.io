@@ -6,20 +6,26 @@ export default () => {
     return (
         <>
             <div className='locationDetail'>
-               <h2>We cover the following areas around Cambridge &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h2> 
+               <h2>We cover the following areas around Cambourne CB23 area &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h2> 
                 <table>
                     <tbody>
                         <tr>
-                            <td>Central Cambridge</td>
-                            <td>Trumpington</td>
-                            <td>Grantchester</td>
-                            <td>Great Shelford</td>
+                            <td>Cambourne</td>
+                            <td>Eltisley</td>
+                            <td>Caxton</td>
+                            <td>Knapwell</td>
                         </tr>
                         <tr>
-                            <td>Little Shelford</td>
-                            <td>Stapleford</td>
-                            <td>Hauxton</td>
-                            <td>Harston</td>
+                            <td>Dry Drayton</td>
+                            <td>Hardwick</td>
+                            <td>Coton</td>
+                            <td>Madingley</td>
+                        </tr>
+                         <tr>
+                            <td>Barton</td>
+                            <td>Highfield Caldecote</td>
+                            <td>Comberton</td>
+                            <td>Kingston</td>
                         </tr>
                     </tbody>
                 </table>
