@@ -1,8 +1,8 @@
 {
-  "name": "dogwalker",
+  "name": "dogwalkerclubs",
   "version": "0.1.2",
   "private": false,
-  "homepage": "https://dogwalkerclubs.co.uk/",
+  "homepage": "https://dogwalkerclubs.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
