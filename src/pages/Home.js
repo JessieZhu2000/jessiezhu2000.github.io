@@ -1,7 +1,7 @@
 import React from "react"
 import main from '../img/main.jpg'
 
-export default () => {
+const Home = () => {
   return (
     <div class='bodyContainer'>
       <div className="bgImg" style={{
@@ -26,3 +26,4 @@ export default () => {
   )
 }
 
+export default Home

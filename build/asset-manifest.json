@@ -1,22 +1,22 @@
 {
-  "main.css": "/static/css/main.22fd6659.chunk.css",
-  "main.js": "/static/js/main.ae180857.chunk.js",
-  "main.js.map": "/static/js/main.ae180857.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.deb03a9d.js",
-  "runtime~main.js.map": "/static/js/runtime~main.deb03a9d.js.map",
-  "static/js/2.d0238f2e.chunk.js": "/static/js/2.d0238f2e.chunk.js",
-  "static/js/2.d0238f2e.chunk.js.map": "/static/js/2.d0238f2e.chunk.js.map",
-  "static/js/3.2051af94.chunk.js": "/static/js/3.2051af94.chunk.js",
-  "static/js/3.2051af94.chunk.js.map": "/static/js/3.2051af94.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.f6e7e029fd85e73298c30ec193c9da34.js": "/precache-manifest.f6e7e029fd85e73298c30ec193c9da34.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.22fd6659.chunk.css.map": "/static/css/main.22fd6659.chunk.css.map",
-  "static/media/about.jpg": "/static/media/about.45353c17.jpg",
-  "static/media/booking.jpg": "/static/media/booking.8f20de9a.jpg",
-  "static/media/dogBoarding.jpg": "/static/media/dogBoarding.d7ce62fe.jpg",
-  "static/media/fee.jpg": "/static/media/fee.5749c814.jpg",
-  "static/media/location.jpg": "/static/media/location.a00258d1.jpg",
-  "static/media/logo.png": "/static/media/logo.855161fc.png",
-  "static/media/main.jpg": "/static/media/main.58c77249.jpg"
+  "files": {
+    "main.css": "/static/css/main.fbe86cc8.css",
+    "main.js": "/static/js/main.1ba192f8.js",
+    "static/js/787.c6738f25.chunk.js": "/static/js/787.c6738f25.chunk.js",
+    "static/media/fee.jpg": "/static/media/fee.551a2352577f8eb99b0b.jpg",
+    "static/media/location.jpg": "/static/media/location.900d33e6da1cef66dfd3.jpg",
+    "static/media/dogBoarding.jpg": "/static/media/dogBoarding.26492d3ce228350dd6f1.jpg",
+    "static/media/about.jpg": "/static/media/about.34a3c079c84093749112.jpg",
+    "static/media/booking.jpg": "/static/media/booking.30fdf72f3b1ea18cd3b9.jpg",
+    "static/media/main.jpg": "/static/media/main.d66dba55989b83284f26.jpg",
+    "static/media/logo.png": "/static/media/logo.d90a1d119823ec86986c.png",
+    "index.html": "/index.html",
+    "main.fbe86cc8.css.map": "/static/css/main.fbe86cc8.css.map",
+    "main.1ba192f8.js.map": "/static/js/main.1ba192f8.js.map",
+    "787.c6738f25.chunk.js.map": "/static/js/787.c6738f25.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbe86cc8.css",
+    "static/js/main.1ba192f8.js"
+  ]
 }

@@ -3,7 +3,8 @@ import booking from '../img/booking.jpg'
 import Body from '../component/Body'
 import Footer from '../component/Footer'
 
-export default () => {
+
+const Booking = () => {
   return (
      <div className='container'>
       <Body show='Booking' bgImg={booking} />
@@ -11,3 +12,5 @@ export default () => {
     </div>
   )
 }
+
+export default Booking

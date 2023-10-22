@@ -3,7 +3,7 @@ import fee from '../img/fee.jpg'
 import Body from '../component/Body'
 import Footer from '../component/Footer'
 
-export default () => {
+const Fee = () => {
   return (
      <div className='container'>
       <Body show='Fees' bgImg={fee} />
@@ -11,3 +11,5 @@ export default () => {
     </div>
   )
 }
+
+export default Fee

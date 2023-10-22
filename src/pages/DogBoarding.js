@@ -3,7 +3,7 @@ import dogBoarding from '../img/dogBoarding.jpg'
 import Body from '../component/Body'
 import Footer from '../component/Footer'
 
-export default () => {
+const DogBoarding = () => {
   return (
     <div className='container'>
       <Body show='DogBoarding' bgImg={dogBoarding} />
@@ -11,3 +11,5 @@ export default () => {
     </div>
   )
 }
+
+export default DogBoarding
