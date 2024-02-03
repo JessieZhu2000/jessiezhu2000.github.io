@@ -39,14 +39,14 @@
             background-color: #ebedf0;
             background: rgba(0, 0, 0, 0.0);
             text-align: left;
-            padding-top: 10px;
+            padding-top: 5px;
             padding-left: 3%;
-            font-size: 22px;
+            font-size: 18px;
         }
     
         .intro p {
             text-align: left;
-            padding-top: 15px;
+            padding-top: 8px;
             color: #efefef;
             font-size: 22px;
         }
@@ -57,6 +57,4 @@
             font-weight: bold;
             padding-bottom: 40px;
         }
-
-
 }

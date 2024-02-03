@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../css/Intro.css'
 
-export default () => {
+const Intro = () => {
   return (
     <div className='intro'>
       <h1>Professional Dog walker / Pet sitter / Pet boarding in Cambridge</h1>
@@ -16,3 +16,5 @@ export default () => {
     </div>
   )
 }
+
+export default Intro;

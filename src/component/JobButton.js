@@ -1,9 +1,11 @@
+
 import React from 'react'
 
-export default ({ onClick }) => {
+const JobButton  = ({ onClick }) => {
   return (
       <>
       <button className="button" onClick={onClick}>Job Vacancy</button>
     </>
   )
 }
+export default JobButton

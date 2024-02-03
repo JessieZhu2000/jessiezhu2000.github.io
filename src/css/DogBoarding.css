@@ -29,7 +29,7 @@
 }
 
 .dogboarding h1 a:hover {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /* desktop screen */
@@ -47,6 +47,6 @@
         width: 80%;
         color: #555;
         margin: 2% auto;
-        font-size: 24px;
+        font-size: 18px;
     }
 }

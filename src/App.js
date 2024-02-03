@@ -8,7 +8,8 @@ import FeesButton from "./component/FeesButton";
 import DogBoardingButton from "./component/DogBoardingButton";
 import BookingButton from "./component/BookingButton";
 
-export default () => {
+
+const App = () => {
   return (
     <>
       <nav className="header">
@@ -25,3 +26,5 @@ export default () => {
     </>
   )
 }
+
+export default App;

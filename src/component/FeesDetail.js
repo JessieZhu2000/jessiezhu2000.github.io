@@ -2,7 +2,7 @@ import React from "react"
 
 import '../css/FeesDetail.css'
 
-const FeeDetails =() => {
+const FeeDetails = () => {
     
     const email = "mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry"
     

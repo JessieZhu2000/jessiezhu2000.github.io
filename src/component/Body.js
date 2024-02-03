@@ -1,7 +1,7 @@
 import React from "react"
 import Detail from "./Detail";
 
-export default ({ show, bgImg }) => {
+const Body = ({ show, bgImg }) => {
   return (
     <>
       <div className="bgImg" style={{
@@ -15,3 +15,4 @@ export default ({ show, bgImg }) => {
     </>
   )
 }
+export default Body

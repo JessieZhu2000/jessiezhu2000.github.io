@@ -2,7 +2,7 @@ import React from "react"
 
 import '../css/LocationDetail.css'
 
-export default () => {
+const LocationDetail = () => {
     return (
         <>
             <div className='locationDetail'>
@@ -35,3 +35,4 @@ export default () => {
         </>
     )
 }
+export default LocationDetail

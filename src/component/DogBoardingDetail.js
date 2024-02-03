@@ -2,7 +2,7 @@ import React from "react"
 
 import '../css/DogBoarding.css'
 
-export default () => {
+const DogBoardingDetail = () => {
     return (
         <div className='dogboarding'>
             <h1>Dog home boarding &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a> </h1>
@@ -21,3 +21,4 @@ export default () => {
         </div>
     )
 }
+export default DogBoardingDetail

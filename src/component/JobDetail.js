@@ -1,8 +1,10 @@
+
 import React from "react"
 
 import '../css/JobsDetail.css'
 
-export default () => {
+
+const JobDetail = () => {
     return (
         <div className='jobs'>
             <h1>Become a dog walker</h1>
@@ -21,3 +23,5 @@ export default () => {
         </div>
     )
 }
+
+export default JobDetail

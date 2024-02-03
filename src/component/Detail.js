@@ -6,7 +6,7 @@ import React from 'react'
 import FeesDetail from './FeesDetail'
 import DogBoardingDetail from './DogBoardingDetail'
 
-export default ({show}) => {
+const Detail = ({show}) => {
   return (
     <div>
       {show === "About" && show !== "Main" && <AboutDetail />}
@@ -18,3 +18,4 @@ export default ({show}) => {
     </div>
   )
 }
+export default Detail

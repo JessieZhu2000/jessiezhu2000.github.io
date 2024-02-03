@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default ({ onClick }) => {
+const DogBoardingButton = ({ onClick }) => {
   return (
       <>
       <button className="button" onClick={onClick}>Dog Boarding</button>
     </>
   )
 }
+export default DogBoardingButton

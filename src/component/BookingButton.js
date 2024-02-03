@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default ({ onClick }) => {
+const BookingButton = ({ onClick }) => {
   return (
     <>
       <button className="button" onClick={onClick}>Booking</button>
     </>
   )
 }
+export default BookingButton

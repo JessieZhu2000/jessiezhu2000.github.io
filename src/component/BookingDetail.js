@@ -2,8 +2,7 @@ import React from "react"
 import { BsTelephoneFill } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 import "../css/BookingDetail.css"
-
-export default () => {
+const BookingDetail = () => {
     return (
         <>
             <div className="bookingDetail">
@@ -29,3 +28,4 @@ export default () => {
         </>
     )
 }
+export default BookingDetail

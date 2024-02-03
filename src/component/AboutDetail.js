@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/AboutDetail.css';
 
-export default () => {
+const AboutDetail = () => {
     return (
         <div className='about'>
             <h1>Welcome to Dogwalker Clubs &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h1>
@@ -24,3 +24,4 @@ export default () => {
 
     )
 }
+export default AboutDetail
