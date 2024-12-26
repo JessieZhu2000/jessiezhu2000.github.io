@@ -1,0 +1,74 @@
+
+.shoppingDetail h2 {
+    margin: 18px;
+    grid-area: header;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.product-image {
+    width: 250px;
+    height: 250px;
+    object-fit: scale-down;
+}
+.shoppingDetail table {
+    width: 80%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 2% 10%;
+}
+
+.shoppingDetail button {
+    color: #2d2928;
+    font-weight: bold;
+    background-color: #e79216;
+    font-size: 14px;
+    padding: 5px;
+    border: 20px;
+    border-radius: 45px;
+}
+
+.shoppingDetail button:hover {
+    font-weight: bold;
+    color: white;
+    background-color: #2d2928;
+}
+
+.shoppingDetail th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+}
+
+.shoppingDetail td {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.shoppingDetail td:nth-child(1) { /* Selects the first column */
+    width: 25%;
+}
+
+.shoppingDetail td:nth-child(2) { /* Selects the second column */
+    width: 50%;
+    font-size: 25px;
+}
+
+.shoppingDetail td:nth-child(3), .shoppingDetail td:nth-child(4) { /* Selects the third and fourth columns */
+    width: 12.5%;
+}
+
+.shoppingDetail tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 800px) {
+
+    .shoppingDetail h2 {
+        grid-area: header;
+        text-align: center;
+        font-size: 30px;
+    }
+}

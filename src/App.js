@@ -7,6 +7,7 @@ import LocationButton from "./component/LocationButton";
 import FeesButton from "./component/FeesButton";
 import DogBoardingButton from "./component/DogBoardingButton";
 import BookingButton from "./component/BookingButton";
+import ShoppingButton from "./component/ShoppingButton";
 
 
 const App = () => {
@@ -17,8 +18,9 @@ const App = () => {
         <div className="buttonGroup"><Link to="/About"><AboutButton /></Link>
           <Link to="/Location"><LocationButton /></Link>
           <Link to="/Fees"><FeesButton /></Link>
-          <Link to="/DogBoarding"><DogBoardingButton /></Link> 
+          <Link to="/DogBoarding"><DogBoardingButton /></Link>
           <Link to="/Booking"><BookingButton /></Link>
+          <Link to="/Shopping"><ShoppingButton /></Link>
           <button className="buttonPhone">07960 482 002</button>
         </div>
       </nav>

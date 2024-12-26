@@ -133,7 +133,7 @@ body {
   .buttonGroup {
     grid-column: 2;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
   }
 
 
