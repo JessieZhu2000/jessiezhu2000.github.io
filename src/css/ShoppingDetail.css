@@ -86,4 +86,22 @@
         overflow-wrap: break-word;
         font-size: 4px;
     }
+
+    .shoppingDetail td:nth-child(1) { /* Selects the first column */
+        width: 35%;
+    }
+
+    .shoppingDetail td:nth-child(2) { /* Selects the second column */
+        display: none;
+    }
+
+    .shoppingDetail td:nth-child(3)  {
+        width: 10%;
+        font-size: 30px;
+        align-content: center;
+    }
+
+    .shoppingDetail td:nth-child(4) {
+        width: 10%;
+    }
 }
