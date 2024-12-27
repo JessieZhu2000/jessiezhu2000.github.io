@@ -4,7 +4,7 @@
     grid-area: header;
     text-align: center;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 40px;
 }
 .product-image {
@@ -13,12 +13,34 @@
     object-fit: scale-down;
 }
 .shoppingDetail table {
-    width: 80%;
+    width: 70%;
     border-collapse: collapse;
-    table-layout: fixed;
     margin: 2% 10%;
+    table-layout: auto;
 }
 
+.shoppingDetail td:nth-child(1) { /* Selects the first column */
+    width: 35%;
+}
+
+.shoppingDetail td:nth-child(2) { /* Selects the second column */
+    font-size: 20px;
+    width: 45%;
+}
+
+.shoppingDetail td:nth-child(3)  {
+    width: 10%;
+    font-size: 30px;
+    align-content: center;
+}
+
+.shoppingDetail td:nth-child(4) {
+    width: 10%;
+}
+
+.shoppingDetail tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 .shoppingDetail button {
     color: #2d2928;
     font-weight: bold;
@@ -46,29 +68,22 @@
     padding: 10px;
     text-align: left;
 }
-
-.shoppingDetail td:nth-child(1) { /* Selects the first column */
-    width: 25%;
-}
-
-.shoppingDetail td:nth-child(2) { /* Selects the second column */
-    width: 50%;
-    font-size: 25px;
-}
-
-.shoppingDetail td:nth-child(3), .shoppingDetail td:nth-child(4) { /* Selects the third and fourth columns */
-    width: 12.5%;
-}
-
-.shoppingDetail tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 800px) {
 
     .shoppingDetail h2 {
         grid-area: header;
         text-align: center;
         font-size: 30px;
+    }
+
+    .shoppingDetail table {
+        width: 60%;
+        border-collapse: collapse;
+        table-layout: auto;
+    }
+
+    td, th {
+        overflow-wrap: break-word;
+        font-size: 4px;
     }
 }

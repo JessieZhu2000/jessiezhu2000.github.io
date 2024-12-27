@@ -16,10 +16,7 @@ const ShoppingDetail = () => {
             <div className="shoppingDetail">
                 <h2>Product Category</h2>
                 <table>
-                    <th>Product</th>
-                    <th>Description</th>
-                    <th>Cost</th>
-                    <th>Action</th>
+
                     <tr>
                         <td><img src={DogLeash} className="product-image" alt=""/>
                         </td>
