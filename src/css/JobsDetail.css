@@ -9,35 +9,35 @@
 
 .jobs h1 {
     width: 90%;
-    z-index: 0;
     margin: 3% auto;
-    color: #555;
-    z-index: 0;
-    font-size: 18px;
+    color: #e79216;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
 }
 
 .jobs h2 {
     width: 90%;
-    color: #555;
+    color: #e79216;
     margin: 2% auto;
-    font-size: 14px;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 400;
 }
 
 /* desktop screen */
 @media only screen and (min-width: 800px) {
     .jobs h1 {
         width: 80%;
-        z-index: 0;
         margin: 3% auto;
-        color: #555;
-        z-index: 0;
-        font-size: 22px;
+        color: #e79216;
+        font-size: clamp(1rem, 2vw, 2rem);
+        font-weight: 600;
     }
 
     .jobs h2 {
         width: 80%;
-        color: #555;
+        color: #e79216;
         margin: 2% auto;
-        font-size: 18px;
+        font-size: clamp(1rem, 2vw, 2rem);
+        font-weight: 400;
     }
 }

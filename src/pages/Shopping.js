@@ -4,7 +4,7 @@ import ShoppingDetail from "../component/ShoppingDetail";
 
  const Shopping = () =>{
     return (
-        <div className='container'>
+    <div className='sitePageBg shoppingPage'>
             <ShoppingDetail />
             <Footer/>
         </div>

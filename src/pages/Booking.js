@@ -6,8 +6,9 @@ import Footer from '../component/Footer'
 
 const Booking = () => {
   return (
-     <div className='container'>
-      <Body show='Booking' bgImg={booking} />
+  <div className='sitePageBg' style={{ backgroundImage:`url(${booking})` }}>
+   {/* Removed bgImg prop to drop inner hero background image */}
+   <Body show='Booking' />
       <Footer />
     </div>
   )

@@ -5,7 +5,6 @@ import  Intro  from './Intro'
 import React from 'react'
 import FeesDetail from './FeesDetail'
 import DogBoardingDetail from './DogBoardingDetail'
-import ShoppingDetail from './ShoppingDetail'
 
 const Detail = ({show}) => {
   return (
@@ -15,7 +14,6 @@ const Detail = ({show}) => {
       {show === "Fees" && show !== "Main" && <FeesDetail />}
       {show === "DogBoarding" && show !== "Main" && <DogBoardingDetail />}
       {show === "Booking" && show !== "Main" && <ContactDetail />}
-      {show === "Shopping" && show !== "Main" && <ShoppingDetail />}
       {show === "Main" && <Intro />}
     </div>
   )

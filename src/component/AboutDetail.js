@@ -1,27 +1,88 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import { Link } from 'react-router-dom';
 import '../css/AboutDetail.css';
 
-const AboutDetail = () => {
-    return (
-        <div className='about'>
-            <h1>Welcome to Cambridge Dog Walker &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></h1>
-            <h2 >
-                I am fully insuranced, DBS checked professional, offering ONE to ONE dog walking, pet sitting services. I care for only one dog at a time—because I believe in giving your pet my full attention, just as I would with my own!
-            </h2>
-            <h2>
-                I'm available seven days a week, including bank holidays, and can accommodate short notice bookings. My rates are competitive, and I never compromise on the quality of care and service I provide.
-            </h2>
-            <h2>
-                I cover in-and-around Trumpington Cambridge area. Please check out location page for more details about which areas I am operating in.
-            </h2>
-            <h2>
-                During your dog’s hourly walk, you'll receive instant WhatsApp updates with photos and notes, so you can see your pet enjoying exercise, games, and social time!
-            </h2>
-             <h2>
-                For pet sitting service, we will provide you WhatsApp updates three times a day throughout. You can see your pet anytime during the stay!
-            </h2>
-        </div>
+const cards = [
+    {
+        title: 'Personal Attention',
+        body: 'I only walk or sit one dog at a time so your dog receives undivided attention, play and calm reassurance—treated like my own.'
+    },
+    {
+        title: 'Reliable & Available',
+        body: 'Seven days a week including bank holidays at short notice. Competitive pricing without lowering standards.'
+    },
+    {
+        title: 'Coverage',
+        body: 'Serving Cambridge and surrounding villages. See the location page for the live coverage map and highlighted areas.'
+    },
+    {
+        title: 'Live Updates',
+        body: 'Walk sessions include WhatsApp updates so you know your dog is active, stimulated and happy.'
+    },
+    {
+        title: 'Boarding & Sitting',
+        body: 'For boarding or sitting you’ll receive three daily WhatsApp updates—you can also check in anytime.'
+    }
+];
 
-    )
-}
+const INTERVAL_MS = 4200; // auto-advance time
+const AboutDetail = () => {
+    const [index, setIndex] = useState(0);
+    const timerRef = useRef(null);
+
+    useEffect(() => {
+        timerRef.current = setInterval(() => {
+            setIndex(prev => (prev + 1) % cards.length);
+        }, INTERVAL_MS);
+        return () => clearInterval(timerRef.current);
+    }, []);
+
+    const goTo = (i) => {
+        setIndex(i);
+        clearInterval(timerRef.current);
+        timerRef.current = setInterval(() => {
+            setIndex(prev => (prev + 1) % cards.length);
+        }, INTERVAL_MS);
+    };
+
+    return (
+        <section className='about'>
+            <header className="about__hero">
+                <h1 className="about__title">Welcome to Cambridge Dog Walker</h1>
+                <p className="about__subtitle">One–to–one care. Trustworthy. Fully insured & DBS checked.</p>
+                <Link className="about__cta" to="/booking">Book Now</Link>
+            </header>
+            <div className="about__carousel about__carousel--row" aria-live="polite">
+                <div className="about__track" style={{ transform:`translateX(-${index * 100}%)` }}>
+                    {cards.map((c, i) => {
+                        const active = i === index;
+                        return (
+                            <article
+                                key={c.title}
+                                className={`aboutCard aboutCard--carouselRow ${active ? 'is-active' : ''}`}
+                                aria-hidden={!active}
+                            >
+                                <h3>{c.title}</h3>
+                                <p>{c.body}</p>
+                            </article>
+                        );
+                    })}
+                </div>
+                <div className="about__dots" role="tablist" aria-label="About highlights">
+                    {cards.map((c, i) => (
+                        <button
+                            key={c.title+"dot"}
+                            className={`about__dot ${i === index ? 'is-active' : ''}`}
+                            onClick={() => goTo(i)}
+                            aria-label={`Show: ${c.title}`}
+                            aria-selected={i === index}
+                            role="tab"
+                            type="button"
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
 export default AboutDetail

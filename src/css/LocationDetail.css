@@ -1,18 +1,16 @@
 /*location detail */
 .locationDetail {
     width: 100%;
-    padding-left: 2%;
+    padding: 4px 2% 0;
     clear: both;
-    background-color: #ebedf0;
-    border-bottom: solid #d7d9dc 1px;
+    background: transparent;
+    border: 0;
     overflow: hidden;
-    background-size: cover;
+    color:#fff;
 }
 
-.locationDetail h2 {
-    text-align: center;
-    font-size: 18px;
-}
+/* Unified heading sizing */
+.locationDetail h2 { text-align:center; font-size:clamp(1.05rem,2.2vw,1.5rem); font-weight:600; margin:0 0 14px; letter-spacing:.5px; text-shadow:0 2px 10px rgba(0,0,0,.55); }
 
 .locationDetail h2 a {
     color: #e79216;
@@ -23,31 +21,99 @@
     font-weight: bold;
 }
 
-.locationDetail table {
-    width: 98%;
-    table-layout: fixed;
+/* Coverage map layout */
+.coverageMap { display:flex; flex-direction:column; gap:16px; margin:0 auto; max-width:1220px; padding:0 6px 26px; }
+
+.mapFrame { position:relative; width:100%; aspect-ratio:4 / 3; /* taller map for better detail */ border:1px solid rgba(255,255,255,.18); border-radius:18px; overflow:hidden; box-shadow:0 6px 28px -10px rgba(0,0,0,.55); background:rgba(0,0,0,.28); backdrop-filter:blur(2px) saturate(140%); -webkit-backdrop-filter:blur(2px) saturate(140%); }
+
+.mapFrame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: contrast(1.05) saturate(0.95);
 }
 
-.locationDetail tbody td {
-    color: #e79216;
-    background-color: #2d2928;
-    padding: 10px;
-    margin: 15px;
-    font-size: 16px;
+.mapAttribution { position:absolute; right:10px; bottom:10px; background:rgba(0,0,0,.5); color:#ffc37f; font-size:12px; padding:4px 8px; border-radius:6px; text-decoration:none; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
+
+/* Carousel replacing overlay tag cloud */
+.coverageCarousel {
+    position: relative;
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 28px;
 }
+
+.coverageSlide {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(8px) scale(.98); /* reduced motion */
+    pointer-events: none;
+    transition: opacity .55s cubic-bezier(.4,.12,.2,1), transform .55s cubic-bezier(.4,.12,.2,1);
+    white-space: nowrap;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.coverageSlide.active,
+.coverageSlide.active.coverageTag { /* ensure existing active tag styles also apply */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.coverageDots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.coverageDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(45,41,40,0.4);
+    border: 1px solid #e79216;
+    cursor: pointer;
+    padding: 0;
+    transition: background .35s, transform .35s;
+}
+.coverageDot.is-active { background:#e79216; transform: scale(1.15); /* gentler */ box-shadow:0 0 0 4px rgba(231,146,22,0.22); }
+.coverageDot:focus-visible { outline:2px solid #2d2928; outline-offset:2px; }
+
+.coverageTag { background:rgba(0,0,0,.45); color:#ffc37f; border:1px solid rgba(255,255,255,.18); padding:10px 18px; border-radius:30px; font-size:14px; cursor:pointer; transition:background .35s, color .35s, transform .35s, border-color .35s; backdrop-filter:blur(4px) saturate(150%); -webkit-backdrop-filter:blur(4px) saturate(150%); box-shadow:0 4px 16px -6px rgba(0,0,0,.5); }
+
+.coverageTag:hover { background:rgba(0,0,0,.55); transform:translateY(-3px); }
+
+.coverageTag.active { background:#ffc37f; color:#1e1e1e; border-color:#ffc37f; font-weight:600; box-shadow:0 6px 20px -6px rgba(0,0,0,.6); }
+
+.coverageNote { text-align:center; font-size:12px; color:#fff; padding:0 0 8px; opacity:.9; text-shadow:0 1px 2px rgba(0,0,0,.6); }
 
 /* desktop screen */
-@media only screen and (min-width: 800px) {
-    .locationDetail tbody td {
-        color: #e79216;
-        background-color: #2d2928;
-        padding: 20px;
-        margin: 20px;
-        font-size: 20px;
-    }
+@media only screen and (min-width: 800px) { .locationDetail h2 { font-size:clamp(1.3rem,2.2vw,1.85rem); } .coverageTag { font-size:16px; } }
 
-    .locationDetail h2 {
-        text-align: center;
-        font-size: 1.5em;
-    }
+/* Position adjustment so map doesn't cover dog face in background (desktop only) */
+@media (min-width: 860px){
+        .pageHero--location .locationDetail .coverageMap { position:relative; }
+        .pageHero--location .locationDetail .mapFrame {
+            margin-top:160px; /* vertical offset retained */
+            margin-left:-140px; /* slightly more shift for enlarged map */
+            width:calc(100% + 140px); /* wider to feel bigger */
+        }
+}
+
+/* Slightly softer shift on very large screens to keep balance */
+@media (min-width: 1400px){
+    .pageHero--location .locationDetail .mapFrame { margin-left:-180px; margin-top:190px; width:calc(100% + 180px); }
+}
+
+/* Cancel offsets on narrow screens for safety */
+@media (max-width: 859px){
+    .pageHero--location .locationDetail .mapFrame { margin-left:0; margin-top:18px; width:100%; }
 }

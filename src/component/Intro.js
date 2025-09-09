@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import '../css/Intro.css'
 
@@ -12,7 +13,7 @@ const Intro = () => {
       <p> &#10003; Pick up and drop off</p>
       <p> &#10003; WhatApp live update</p>
       <p> &#10003; Reliable &#38; Friendly</p>
-      <p><a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a></p>
+  <p><Link to="/booking">Book Now</Link></p>
     </div>
   )
 }

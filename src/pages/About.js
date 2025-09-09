@@ -8,8 +8,8 @@ import Ad from './SideAd'
 export default class About extends React.Component {
   render() {
     return (
-      <div className='container'>
-        <Body show='About' bgImg={aboutImg} />
+  <div className='sitePageBg' style={{ backgroundImage:`url(${aboutImg})` }}>
+  <Body show='About' />
         <Ad />
         <Footer />
       </div>

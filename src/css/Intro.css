@@ -5,13 +5,15 @@
     padding-top: 10px;
     padding-left: 3%;
     font-size: 18px;
+    color: #e79216;
+    font-weight: 400;
 }
 
 .intro p {
     margin-top: 50px;
     text-align: right;
     padding: 5px;
-    color: #efefef;
+    color: #e79216;
     font-size: 18px;
     font-weight: 400;
 }

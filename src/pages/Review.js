@@ -54,7 +54,7 @@ export const Pearl = () => {
       }}>
 
         <div className='intro'>
-          <h1>Jessie is great and very reliable. My dog really enjoys her walks and it is great to have someone so local!</h1>
+          <h1>Jess is great and very reliable. My dog really enjoys her walks and it is great to have someone so local!</h1>
           <p>Michael Derringer</p>
         </div>
       </div>

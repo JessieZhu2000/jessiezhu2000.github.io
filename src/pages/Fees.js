@@ -5,8 +5,8 @@ import Footer from '../component/Footer'
 
 const Fee = () => {
   return (
-     <div className='container'>
-      <Body show='Fees' bgImg={fee} />
+  <div className='sitePageBg' style={{ backgroundImage:`url(${fee})` }}>
+   <Body show='Fees' />
       <Footer />
     </div>
   )

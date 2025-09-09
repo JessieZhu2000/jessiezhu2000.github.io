@@ -5,8 +5,8 @@ import Footer from '../component/Footer'
 
 const DogBoarding = () => {
   return (
-    <div className='container'>
-      <Body show='DogBoarding' bgImg={dogBoarding} />
+    <div className='sitePageBg' style={{ backgroundImage:`url(${dogBoarding})` }}>
+      <Body show='DogBoarding' />
       <Footer />
     </div>
   )

@@ -1,9 +1,29 @@
 import React from "react"
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
-    <div className='footer'><p>Copyright © 2025 Cambridge Dog Walker</p></div>
-  )
-}
+    <footer className="siteFooter" role="contentinfo">
+      <div className="siteFooter__inner">
+        <div className="siteFooter__brand">
+          <h4 className="siteFooter__title">Cambridge Dog Walker</h4>
+          <p className="siteFooter__tag">Trusted local dog walking & pet care.</p>
+        </div>
+        <nav className="siteFooter__nav" aria-label="Footer navigation">
+          <a href="/About">About</a>
+          <a href="/Location">Location</a>
+          <a href="/Fees">Fees</a>
+          <a href="/DogBoarding">Boarding</a>
+          <a href="/Booking">Booking</a>
+        </nav>
+        <div className="siteFooter__contact">
+          <p><strong>Call:</strong> <a href="tel:07960482002">07960 482 002</a></p>
+          <p><strong>Email:</strong> <a href="mailto:camdogwalker@gmail.com">camdogwalker@gmail.com</a></p>
+        </div>
+      </div>
+      <div className="siteFooter__legal">© {year} Cambridge Dog Walker. All rights reserved.</div>
+    </footer>
+  );
+};
 
 export default Footer

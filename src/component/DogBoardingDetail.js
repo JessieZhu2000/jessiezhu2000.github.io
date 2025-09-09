@@ -1,24 +1,76 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
+import '../css/DogBoarding.css';
 
-import '../css/DogBoarding.css'
+const features = [
+    "One-to-one bespoke home boarding – only one guest dog at a time for total focus.",
+    "Structured day: morning, midday & evening walks plus supervised play & social time.",
+    "Plenty of enrichment – games, sniff time and calm rest in a home setting.",
+    "Live WhatsApp photo updates so you always feel connected.",
+    "Transparent rate £50 per day (holiday rates may vary – book early)."
+];
 
 const DogBoardingDetail = () => {
+    const [idx, setIdx] = useState(0);
+    const total = features.length;
+    const timerRef = useRef(null);
+
+    useEffect(() => {
+        timerRef.current = setInterval(() => {
+            setIdx(i => (i + 1) % total);
+        }, 6000);
+        return () => clearInterval(timerRef.current);
+    }, [total]);
+
+    const go = (i) => {
+        clearInterval(timerRef.current);
+        setIdx(i);
+    };
+
     return (
-        <div className='dogboarding'>
-            <h1>Dog home boarding &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry">Book Now</a> </h1>
-            <h2>
-                &#10003; One to one bespoke home boarding program. Your dog will be looked after in my own home as if it were my own pet. We only look after one dog in our home at one time.  
-            </h2>
-            <h2>
-               &#10003; At least one hour walk in the morning, lunch time and evening. Play time in the park, socialise time with other dogs and a lot of cuddles from us!
-            </h2>
-            <h2>
-               &#10003; Live WhatsApp pictures update throughout. You can see your dog anytime during the stay.
-            </h2>
-            <h2>
-               &#10003; Boarding rate £50 per day. Holiday rate increases! Please book in advance to avoid disappointment!
-            </h2>
-        </div>
-    )
-}
-export default DogBoardingDetail
+        <section className='dogboarding'>
+            <header className='boardingHero'>
+                <h1 className='boardingTitle'>Dog Home Boarding</h1>
+                <p className='boardingSubtitle'>A calm, one–to–one home-from-home stay tailored to your dog’s routine.</p>
+                <Link className='boardingCta' to="/booking">Book Now</Link>
+            </header>
+            <ul
+                className='boardingList boardingCarousel'
+                aria-live='polite'
+                aria-atomic='true'
+                aria-label='Dog boarding benefits carousel'
+            >
+                {features.map((item, i) => {
+                    const active = i === idx;
+                    return (
+                        <li
+                            key={item}
+                            className={'boardingItem boardingItem--carousel ' + (active ? 'is-active' : 'is-inactive')}
+                            aria-hidden={!active}
+                            aria-label={`Benefit ${i + 1} of ${total}`}
+                        >
+                            <span className='tick' aria-hidden="true">✓</span>
+                            <span>{item}</span>
+                        </li>
+                    );
+                })}
+            </ul>
+            <div className='boardingDots' role='tablist' aria-label='Select benefit'>
+                {features.map((_, i) => (
+                    <button
+                        key={i}
+                        className={'boardingDot' + (i === idx ? ' is-active' : '')}
+                        onClick={() => go(i)}
+                        aria-label={`Show benefit ${i + 1}`}
+                        aria-selected={i === idx}
+                        role='tab'
+                        type='button'
+                    />
+                ))}
+            </div>
+            <p className='boardingNote'>Need a custom schedule or medication administered? Include details in your enquiry—tailored plans welcome.</p>
+        </section>
+    );
+};
+
+export default DogBoardingDetail;

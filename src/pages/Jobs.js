@@ -5,8 +5,8 @@ import Footer from '../component/Footer'
 
 const Jobs = () => {
   return (
-     <div className='container'>
-      <Body show='Jobs' bgImg={job} />
+  <div className='sitePageBg' style={{ backgroundImage:`url(${job})` }}>
+   <Body show='Jobs' bgImg={job} />
       <Footer />
     </div>
   )
