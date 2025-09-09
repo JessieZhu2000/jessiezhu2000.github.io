@@ -72,10 +72,10 @@ const BookingDetail = () => {
                 if(!p.petName.trim()) errs[`petName_${i}`]='Required';
                 if(!p.petBreed.trim()) errs[`petBreed_${i}`]='Required';
             });
+            if (!formData.isInsured) errs.isInsured = 'Select one';
         }
         if (s === 1) { // Service
             if (!formData.services.walking && !formData.services.weeklyWalking && !formData.services.boarding && !formData.services.catVisit) errs.services = 'Select at least one';
-            if (!formData.isInsured) errs.isInsured = 'Select one';
         }
         if (s === 2) { // Schedule
             if (!formData.date) errs.date = 'Date required';
@@ -175,14 +175,27 @@ const BookingDetail = () => {
                                     {errors[`petName_${i}`] && <div className='inlineValidation'>{errors[`petName_${i}`]}</div>}
                                 </div>
                                 <div className="formRow">
-                                    <label>Breed *</label>
-                                    <input value={p.petBreed} onChange={(e)=>handleChange(e,i,'petBreed')} aria-invalid={!!errors[`petBreed_${i}`]} />
-                                    {errors[`petBreed_${i}`] && <div className='inlineValidation'>{errors[`petBreed_${i}`]}</div>}
+                                    <fieldset className="formFieldset" style={{margin:0}}>
+                                        <legend>Pet Category *</legend>
+                                        <div style={{display:'flex',gap:12,alignItems:'center',flexWrap:'wrap'}}>
+                                            <label className='opt'><input type='radio' name={`petCategory_${i}`} value='Dog' checked={p.petBreed==='Dog'} onChange={(e)=>handleChange(e,i,'petBreed')} /> Dog</label>
+                                            <label className='opt'><input type='radio' name={`petCategory_${i}`} value='Cat' checked={p.petBreed==='Cat'} onChange={(e)=>handleChange(e,i,'petBreed')} /> Cat</label>
+                                        </div>
+                                        {errors[`petBreed_${i}`] && <div className='inlineValidation'>{errors[`petBreed_${i}`]}</div>}
+                                    </fieldset>
                                 </div>
                                 <div className="formRow">
                                     <label>Age</label>
                                     <input value={p.petAge} onChange={(e)=>handleChange(e,i,'petAge')} />
                                 </div>
+                                {i === 0 && (
+                                    <fieldset className="formFieldset" style={{marginTop:8}}>
+                                        <legend>Has insurance *</legend>
+                                        <label className='opt'><input type='radio' name='isInsured' value='Yes' checked={formData.isInsured==='Yes'} onChange={handleChange}/> Yes</label>
+                                        <label className='opt'><input type='radio' name='isInsured' value='No' checked={formData.isInsured==='No'} onChange={handleChange}/> No</label>
+                                        {errors.isInsured && <div className='inlineValidation'>{errors.isInsured}</div>}
+                                    </fieldset>
+                                )}
                                 {formData.pets.length>1 && <button type='button' className='miniRemoveBtn' onClick={()=>removePet(i)} aria-label={`Remove pet ${i+1}`}>×</button>}
                             </div>
                         ))}
@@ -191,12 +204,7 @@ const BookingDetail = () => {
                 )}
                 {step === 1 && (
                     <div className="stepFade">
-                        <fieldset className="formFieldset">
-                            <legend>Insurance *</legend>
-                            <label className='opt'><input type='radio' name='isInsured' value='Yes' checked={formData.isInsured==='Yes'} onChange={handleChange}/> Yes</label>
-                            <label className='opt'><input type='radio' name='isInsured' value='No' checked={formData.isInsured==='No'} onChange={handleChange}/> No</label>
-                            {errors.isInsured && <div className='inlineValidation'>{errors.isInsured}</div>}
-                        </fieldset>
+                        {/* Insurance moved to Pet step (step 0) and shown next to Age for better UX */}
                         <fieldset className="formFieldset">
                             <legend>Services *</legend>
                             <label className='opt'><input type='checkbox' name='walking' checked={formData.services.walking} onChange={handleChange} disabled={formData.services.weeklyWalking}/> Walking <span className='priceHint'>{formatGBP(SERVICE_PRICES.WALKING)}</span></label>

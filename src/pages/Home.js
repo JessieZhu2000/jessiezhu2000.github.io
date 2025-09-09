@@ -42,7 +42,7 @@ const Home = () => {
         <h1 id="home-hero-heading" className="homeHero__title">Professional Dog Walker, Pet Sitter & Boarding in Cambridge</h1>
         <ul className="featureList" aria-label="Service highlights">
           <li>Happy dog equals happy owner</li>
-          <li>Excellent Google reviews <span className="stars" aria-label="five stars">★★★★★</span></li>
+          <li>Excellent customer reviews <span className="stars" aria-label="five stars">★★★★★</span></li>
           <li>Instant booking & confirmation</li>
           <li>Fully insured & DBS checked</li>
           <li>Free pick up & drop off</li>
@@ -54,8 +54,8 @@ const Home = () => {
         </div>
       </section>
       <aside className="reviewsCard" aria-labelledby="reviews-heading">
-        <h2 id="reviews-heading" className="reviewsCard__title">Google Reviews</h2>
-        <ul className="reviewsList" aria-live="polite" aria-atomic="true" aria-label="Customer reviews (3 rotating)">
+  <h2 id="reviews-heading" className="reviewsCard__title">Customer Testimonials</h2>
+  <ul className="reviewsList" aria-live="polite" aria-atomic="true" aria-label="Customer testimonials (3 rotating)">
           {visibleReviews.map((r, idx) => (
             <li
               key={`${r.id}-${cycle}`}

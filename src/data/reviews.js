@@ -1,4 +1,4 @@
-// Static snapshot of 12 Google-style reviews (anonymized). Replace with live fetch if backend added.
+// Static snapshot of 12 customer reviews (anonymized). Replace with live fetch if backend added.
 const reviews = [
   { id: 1, rating: 5, text: 'Jess is amazing! My dog loves her and always comes home happy. Highly recommend!', author: 'Sarah P.' },
   { id: 2, rating: 5, text: 'Reliable, friendly, and great communication. The WhatsApp updates are so reassuring!', author: 'James L.' },

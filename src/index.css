@@ -117,9 +117,10 @@ body::before {
   padding: 0 clamp(1rem,3vw,2rem);
   display: flex;
   align-items: center;
-  justify-content: center; /* center logo + buttons block */
+  justify-content: flex-start; /* place logo at left, buttons pushed right */
   min-height: var(--nav-height);
   gap: .85rem; /* balanced gap */
+  flex-wrap: nowrap; /* keep logo and buttons on same row */
   position: relative;
 }
 
@@ -134,6 +135,8 @@ body::before {
   color: var(--color-foreground, #1d1b19);
 }
 .navBar .buttonGroup { margin-left: 0; }
+/* Push button group to the right of the logo on wide screens */
+.navBar .buttonGroup { margin-left: auto; flex: 0 1 auto; display:flex; justify-content:flex-end; gap:.85rem; min-width: 0; }
 .navBrand {
   display: flex;
   align-items: center;
@@ -147,16 +150,17 @@ body::before {
 }
 .navBrand .brandText { font-family: 'Inter', system-ui, Arial, sans-serif; font-weight:700; background:linear-gradient(90deg,#1f1d1c,#4a403b); -webkit-background-clip:text; background-clip:text; color:transparent; position:relative; }
 .navBrand .brandEm { background:linear-gradient(90deg,#E67514,#ffb661); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.navBrand { flex:0 0 16.6667vw; max-width:16.6667vw; display:flex; align-items:center; justify-content:center; }
+.navBrand { flex:0 0 auto; max-width:none; display:flex; align-items:center; justify-content:flex-start; margin-right:.8rem; }
 .navBrand .logo { 
-  width: 14vw; /* slightly smaller logo */
-  max-width: 150px; /* lower cap on wide screens */
-  min-width: 56px; /* slightly smaller floor for small devices */
+  width: 20vw; /* larger/wider logo */
+  max-width: 220px; /* higher cap on wide screens */
+  min-width: 96px; /* larger floor for small devices */
   height: auto; /* preserve aspect ratio */
+  /* allow full image to show; constrain height so it doesn't overpower header */
+  max-height: calc(var(--nav-height) - 16px);
   display: block;
-  object-fit: cover;
-  border-radius: 28px; /* slightly less rounded for more visible logo */
-  overflow: hidden;
+  object-fit: contain;
+  border-radius: 9999px; /* fully round */
   margin: 12px 0; /* outer separation above/below the logo */
   padding: 0; /* no padding so the logo blends into background */
   background: transparent; /* transparent background to blend with page */
@@ -168,8 +172,13 @@ body::before {
   box-shadow: 0 8px 18px rgba(0,0,0,.28);
 }
 @media (max-width:640px){
-  .navBrand { flex:0 0 16.6667vw; max-width:16.6667vw; }
-  .navBrand .logo { width:20vw; max-width:140px; min-width:48px; margin:10px 0; padding:0; background: transparent; }
+  /* Do not force a narrow fixed flex-basis for the brand on small screens.
+    Use auto sizing so the button group can sit to the right when space allows.
+    Also make the header stretch so the logo can match the two-row button height. */
+  .navBar { position: static; align-items: stretch; }
+  .navBrand { flex: 0 0 auto; max-width: none; display:flex; align-items: stretch; margin-left: .6rem; }
+  /* Make the logo scale to fit the header area without cropping. */
+  .navBrand .logo { width: auto; height: auto; max-height: calc(var(--nav-height) * 1.6); max-width: 160px; min-width:48px; margin:0; padding:0; background: transparent; object-fit: contain; border-radius: 9999px; }
   .mobileToggle { display:none; }
 
   /* Mobile: show nav buttons in-flow as a stacked panel */
@@ -180,10 +189,13 @@ body::before {
     right: auto;
     bottom: auto;
     background: transparent;
-    padding: .5rem .5rem 1rem;
+    padding: .35rem .4rem .75rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .6rem;
+    /* two rows layout: fill columns so items form two horizontal rows */
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column; /* fill columns so we get two rows */
+    grid-auto-columns: minmax(0, 1fr);
+    gap: .45rem;
     transform: none;
     opacity: 1;
     pointer-events: auto;
@@ -214,29 +226,61 @@ body::before {
   .buttonGroup .button.gradient { background: linear-gradient(90deg,#E67514,#ffae62); color:#fff; border:0; }
   /* grid gap handles spacing; remove redundant top margins */
   .buttonGroup .button + .button { margin-top: 0; }
-  /* Make the booking button span two columns on small screens */
-  .buttonGroup .button.gradient { grid-column: 1 / -1; }
-  .buttonGroup .buttonPhone { grid-column: 1 / -1; }
+  /* On mobile use smaller paddings and font to fit labels in grid cells */
+  .buttonGroup .button {
+    padding: .6rem .45rem;
+    font-size: .92rem;
+    white-space: normal;
+    line-height: 1.05;
+  }
+  /* Booking and phone are regular grid items (no spanning) so all items fit in two rows */
+  .buttonGroup .button.gradient { grid-column: auto; }
+  .buttonGroup .buttonPhone { grid-column: auto; }
   .buttonGroup .buttonPhone { width:100%; text-align:center; padding:.9rem 1rem; border-radius:10px; border:1px solid rgba(29,27,25,0.06); background:transparent; }
 }
 @media (max-width:640px){ .navBrand .brandText { font-size:1.05rem; } }
 
 .buttonGroup { display:flex; align-items:center; gap:.55rem; }
-.buttonGroup .button { --btn-bg:#1f1d1c; --btn-bg-hover:#E67514; padding:.65rem 1.15rem; font-size:.8rem; border-radius: 40px; position:relative; }
-.buttonGroup .button.gradient { background: linear-gradient(90deg,#E67514,#ffae62); --btn-bg-hover:#1f1d1c; color:#fff; box-shadow:0 4px 16px -6px rgba(230,117,20,.55); }
+.buttonGroup .button {
+  padding: .5rem .9rem;
+  font-size: .92rem;
+  color: var(--color-text);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: none;
+}
+.buttonGroup .button.gradient { background: linear-gradient(90deg,#E67514,#ffae62); color:#fff; box-shadow:0 4px 16px -6px rgba(230,117,20,.55); }
 .buttonGroup .button.gradient:hover { box-shadow:0 8px 24px -8px rgba(230,117,20,.65); }
 
 /* Underline hover effect */
-.buttonGroup .button::after { content:""; position:absolute; left:16px; right:16px; bottom:6px; height:3px; background:linear-gradient(90deg,#E67514,#ffb661); border-radius:3px; transform:scaleX(0); transform-origin:left; transition:transform .35s ease; }
+.buttonGroup .button::after { content:""; position:absolute; left:16px; right:16px; bottom:6px; height:2px; background:var(--color-primary); border-radius:2px; transform:scaleX(0); transform-origin:left; transition:transform .28s ease; }
 .buttonGroup .button:hover::after, .buttonGroup .button:focus-visible::after { transform:scaleX(1); }
 .buttonGroup .button.gradient::after { background:linear-gradient(90deg,#1f1d1c,#362f2b); }
+
+/* Modern, background-free nav buttons (except .gradient) */
+.buttonGroup .button:not(.gradient) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: var(--color-text) !important;
+}
+
+/* Active page highlight: use primary color + underline instead of filled background */
+.buttonGroup .button[aria-current='page'] {
+  background: transparent !important;
+  color: var(--color-primary) !important;
+  font-weight: 700;
+}
+.buttonGroup .button[aria-current='page']::after { transform:scaleX(1); background:var(--color-primary) !important; }
 
 /* Active page highlight (using aria-current if React Router adds it) */
 .buttonGroup .button[aria-current='page'] { background:#E67514; color:#fff; box-shadow:0 4px 16px -6px rgba(230,117,20,.55); }
 .buttonGroup .button[aria-current='page']::after { transform:scaleX(1); }
 
-.buttonPhone { margin-left:.4rem; box-shadow:0 4px 14px -4px rgba(0,0,0,.4); background:#1f1d1c; border:1px solid #E67514; }
-.buttonPhone:hover { background:#E67514; color:#fff; filter:none; }
+.buttonPhone { margin-left:.4rem; box-shadow:none; background: transparent; border: none; color: var(--color-text); }
+.buttonPhone:hover { background: rgba(230,117,20,0.08); color: var(--color-text); }
 
 @media (max-width:880px){
   .buttonGroup { gap:.4rem; }
@@ -244,10 +288,11 @@ body::before {
   .buttonPhone { display:none; }
 }
 @media (max-width:600px){
-  .navBar { flex-wrap:wrap; padding: .35rem clamp(.75rem,2vw,1.2rem) .75rem; }
-  .buttonGroup { flex:1 0 100%; justify-content:flex-start; padding-top:.25rem; }
-  .navBrand { flex:1 0 100%; }
-  .buttonGroup .button { font-size:.7rem; }
+  .navBar { flex-wrap:nowrap; padding: .25rem clamp(.6rem,2vw,1rem) .55rem; }
+  /* keep logo and buttons on same row; allow buttonGroup to shrink/wrap internally */
+  .navBrand { flex: 0 0 auto; margin-right: .6rem; }
+  .buttonGroup { flex: 1 1 auto; justify-content:flex-end; padding-top:0; gap:.45rem; }
+  .buttonGroup .button { font-size:.78rem; }
 }
 
 /* Hero Section */
@@ -451,15 +496,119 @@ small { font-size: var(--font-size-xs); }
   .hero { padding-top:3.2rem; }
 }
 @media (max-width: 600px){
-  .navBar { flex-wrap:wrap; gap:.8rem; padding:.6rem 0 1rem; }
-  .navLinks { width:100%; order:3; }
-  .button, .buttonPhone { width:100%; padding:.75rem 1rem; }
+  /* Keep header items on a single line where possible so the first nav
+     button doesn't wrap beneath the logo. Allow internal wrapping inside
+     the buttonGroup/grid if needed. */
+  .navBar { flex-wrap: nowrap; gap: .6rem; padding: .35rem 0 .6rem; align-items: center; }
+  .navLinks { width: 100%; order: 3; }
+  /* Allow buttons to size naturally rather than forcing full-width */
+  .button, .buttonPhone { width: auto; padding: .6rem .9rem; }
   .cardGrid { gap:1.15rem; }
   .card { padding:1rem 1rem 1.15rem; }
 }
 @media (max-width: 700px){
-  .navBar .navBrand, .navBar .buttonGroup { flex: 0 0 100%; max-width:100%; }
-  .navBar .buttonGroup { justify-content:flex-start; }
+  /* Keep logo and button group on the same row on narrow screens.
+    Avoid forcing both elements to 100% width which causes the
+    first nav button (About) to drop below the logo. */
+  .navBar .navBrand { flex: 0 0 auto; max-width: none; }
+  .navBar .buttonGroup { flex: 0 1 auto; max-width: none; justify-content: flex-end; }
+}
+
+/* Strong mobile override: force nav button group into exactly 2 rows on small screens
+   This block is intentionally placed at the end and uses a more specific selector
+   plus !important where needed to avoid being overridden by earlier rules. */
+@media (max-width:640px){
+  .header .navBar .buttonGroup{
+    display: grid !important;
+    grid-template-rows: repeat(2, auto) !important; /* exactly two rows */
+    grid-auto-flow: column !important; /* fill columns so items form two rows */
+    grid-auto-columns: minmax(0, 1fr) !important;
+    gap: .45rem !important;
+    padding: .35rem .4rem .75rem !important;
+  }
+
+  /* Ensure each button is sized to fit in the grid cells */
+  .header .navBar .buttonGroup .button,
+  .header .navBar .buttonGroup .buttonPhone{
+    width: 100% !important;
+    padding: .6rem .45rem !important;
+    font-size: .9rem !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* On mobile present the phone as plain text (not a pill/button). It
+     remains clickable (JS/onClick or tel: link) but visually appears as
+     a simple phone number. */
+  .header .navBar .buttonGroup .buttonPhone{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: .25rem 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+  }
+
+  /* Restyled mobile nav buttons: larger, rounded cards with soft shadow
+     for better touch targets. Booking keeps the gradient; non-gradient
+     items use a dark card style with white text. */
+  .header .navBar .buttonGroup {
+    gap: .6rem !important;
+  }
+
+  .header .navBar .buttonGroup .button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: .6rem .6rem !important;
+    font-size: .98rem !important;
+    border-radius: 8px !important;
+    transition: transform .12s ease !important;
+    text-decoration: none !important;
+    border: none !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+  }
+
+  .header .navBar .buttonGroup .button.gradient {
+    background: linear-gradient(90deg,#E67514,#ffae62) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08) !important;
+  }
+
+  .header .navBar .buttonGroup .button:hover,
+  .header .navBar .buttonGroup .button:focus {
+    transform: translateY(-2px) !important;
+  }
+
+  /* Ensure non-gradient nav buttons remain background-free on mobile */
+  .header .navBar .buttonGroup .button:not(.gradient) {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Prevent flex rules from forcing buttons to wrap differently */
+  .header .navBar .buttonGroup{ flex-wrap: unset !important; }
+  /* Ensure phone is visible on mobile but presented as inline text (not a pill/button). */
+  .header .navBar .buttonGroup .buttonPhone {
+    display: inline-block !important;
+    grid-column: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--color-primary) !important;
+    font-weight:700 !important;
+    padding: .25rem 0 !important;
+  }
 }
 
 /* Responsive image helpers */

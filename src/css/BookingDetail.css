@@ -31,8 +31,8 @@
 
 .formGrid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
 .formFieldset { border:1px dashed rgba(230,117,20,.4); padding:14px 18px 18px; border-radius:20px; display:flex; flex-wrap:wrap; gap:28px; align-items:center; background:rgba(255,255,255,.1); backdrop-filter:blur(6px) saturate(140%); -webkit-backdrop-filter:blur(6px) saturate(140%); }
-.formFieldset legend { padding:0 8px; font-weight:600; font-size:.75rem; letter-spacing:.6px; color:#ffcf9c; text-transform:uppercase; text-shadow:0 1px 2px rgba(0,0,0,.6); }
-.formFieldset .opt { font-size:.85rem; display:flex; align-items:center; gap:6px; }
+.formFieldset legend { padding:0 8px; font-weight:600; font-size:.9rem; letter-spacing:.5px; color:#ffcf9c; /* keep original v style */ text-shadow:0 1px 2px rgba(0,0,0,.6); }
+.formFieldset .opt { font-size:.9rem; display:flex; align-items:center; gap:6px; }
 .formFieldset input[type=checkbox], .formFieldset input[type=radio]{ transform:scale(1.05); accent-color:#E67514; }
 .priceHint { background:#1f1d1c; color:#ffb661; padding:2px 8px 3px; border-radius:999px; font-size:.65rem; letter-spacing:.5px; font-weight:600; box-shadow:0 0 0 1px rgba(230,117,20,.4); }
 .estTotal { flex-basis:100%; margin-top:10px; font-size:.75rem; letter-spacing:.5px; color:#8a4e12; font-weight:600; }
