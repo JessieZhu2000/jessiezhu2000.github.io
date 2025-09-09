@@ -27,7 +27,7 @@ const App = () => {
             <Link to="/Shopping" className="button">Shop</Link>
             <Link to="/FAQ" className="button">FAQ</Link>
             <Link to="/Booking" className="button gradient">Booking</Link>
-            <button className="buttonPhone" onClick={()=>window.location.href='tel:07960482002'}>07960 482 002</button>
+            <button className="buttonPhone" onClick={()=>window.location.href='tel:07514434225'}>07514 434 225</button>
           </div>
         </div>
       </nav>
