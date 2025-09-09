@@ -1,7 +1,6 @@
 import React from "react"
 
 import "../css/ShoppingDetail.css"
-import { Link } from "react-router-dom";
 import DogLeash from "../img/product/DogLeash.jpeg";
 import FoodFeeder from "../img/product/Foodfeeder.jpeg";
 import DogCollar from "../img/product/DogCollar.jpeg";
@@ -67,13 +66,13 @@ const ShoppingDetail = () => {
                 {items.map(item => (
                     <article key={item.buyLink} className="productCard">
                         <figure className="productImgWrap">
-                            <img src={item.name} className="product-image" alt={item.description} loading="lazy" />
+                            <img src={item.name} className="product-image" alt={item.description + ' - home dog boarding Cambridge accessory'} loading="lazy" />
                         </figure>
                         <div className="productBody">
                             <p className="productDesc">{item.description}</p>
                             <div className="productMeta">
                                 <span className="productPrice">{item.cost}</span>
-                                <Link to={item.buyLink} className="buyBtn">Buy</Link>
+                                {/* Buy button removed as per request */}
                             </div>
                         </div>
                     </article>

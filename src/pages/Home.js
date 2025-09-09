@@ -5,24 +5,37 @@ import '../css/Home.css';
 import reviews from '../data/reviews';
 
 const Home = () => {
-  const visibleReviews = reviews.slice(0,12);
-  const [reviewIndex, setReviewIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0); // starting index of current window
+  const [cycle, setCycle] = useState(0); // used to force remount for animation
+  const windowSize = 3;
+  const allReviews = reviews; // full list
   const timerRef = useRef(null);
 
-  useEffect(() => {
-    // auto advance every 6s
-    timerRef.current = setInterval(() => {
-      setReviewIndex(i => (i + 1) % visibleReviews.length);
-    }, 6000);
-    return () => clearInterval(timerRef.current);
-  }, [visibleReviews.length]);
+  const totalPages = Math.ceil(allReviews.length / windowSize);
+  const pageIndex = Math.floor(startIndex / windowSize);
 
-  const goTo = (idx) => {
-    clearInterval(timerRef.current);
-    setReviewIndex(idx);
+  useEffect(()=>{
+    if(timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(()=>{
+      setStartIndex(i => (i + windowSize) % allReviews.length);
+      setCycle(c => c + 1);
+    }, 6000);
+    return ()=> clearInterval(timerRef.current);
+  },[allReviews.length, startIndex]);
+
+  const goToPage = (p)=>{
+    if(timerRef.current) clearInterval(timerRef.current);
+    setStartIndex((p % totalPages) * windowSize);
+    setCycle(c=>c+1);
   };
+  const nextPage = ()=> goToPage((pageIndex + 1) % totalPages);
+  const prevPage = ()=> goToPage((pageIndex - 1 + totalPages) % totalPages);
+
+  const windowIndices = Array.from({length: Math.min(windowSize, allReviews.length)}, (_,i)=> (startIndex + i) % allReviews.length);
+  const visibleReviews = windowIndices.map(i => allReviews[i]);
 
   return (
+    <div>
     <div className="homeHero" style={{ backgroundImage: `url(${main})` }}>
       <div className="homeHero__overlay" aria-hidden="true" />
       <section className="homeHero__intro" aria-labelledby="home-hero-heading">
@@ -42,42 +55,46 @@ const Home = () => {
       </section>
       <aside className="reviewsCard" aria-labelledby="reviews-heading">
         <h2 id="reviews-heading" className="reviewsCard__title">Google Reviews</h2>
-        <ul 
-          className="reviewsList" 
-          aria-live="polite" 
-          aria-atomic="true" 
-          aria-label="Customer reviews carousel"
-        >
-          {visibleReviews.map((r, idx) => {
-            const active = idx === reviewIndex;
-            return (
-              <li
-                key={r.id}
-                className={"review" + (active ? " is-active" : " is-inactive")}
-                aria-hidden={!active}
-                aria-label={`Review ${idx+1} of ${visibleReviews.length}, rating ${r.rating} stars`}
-              >
-                <span className="stars" aria-hidden="true">{'★'.repeat(r.rating)}</span> {r.text}
-                {r.author && <span className="reviewAuthor"> — {r.author}</span>}
-              </li>
-            )
-          })}
+        <ul className="reviewsList" aria-live="polite" aria-atomic="true" aria-label="Customer reviews (3 rotating)">
+          {visibleReviews.map((r, idx) => (
+            <li
+              key={`${r.id}-${cycle}`}
+              className="review is-visible"
+              aria-label={`Review ${(startIndex + idx)%allReviews.length + 1} of ${allReviews.length}, rating ${r.rating} stars`}
+            >
+              <span className="stars" aria-hidden="true">{'★'.repeat(r.rating)}</span> {r.text}
+              {r.author && <span className="reviewAuthor"> — {r.author}</span>}
+            </li>
+          ))}
         </ul>
-        <div className="reviewsDots" role="tablist" aria-label="Select review">
-          {visibleReviews.map((_, idx) => (
+        <div className="reviewsDots" role="tablist" aria-label="Review groups navigation">
+          <button
+            type="button"
+            className="reviewsDot"
+            aria-label="Previous reviews"
+            onClick={prevPage}
+          />
+          {Array.from({length: totalPages}).map((_,p)=>(
             <button
-              key={idx}
-              className={"reviewsDot" + (idx === reviewIndex ? " is-active" : "")}
-              aria-label={`Show review ${idx+1}`}
-              aria-selected={idx === reviewIndex}
-              role="tab"
-              onClick={() => goTo(idx)}
+              key={p}
               type="button"
+              className={"reviewsDot" + (p===pageIndex?" is-active":"")}
+              role="tab"
+              aria-selected={p===pageIndex}
+              aria-label={`Go to review group ${p+1} of ${totalPages}`}
+              onClick={()=>goToPage(p)}
             />
           ))}
+          <button
+            type="button"
+            className="reviewsDot"
+            aria-label="Next reviews"
+            onClick={nextPage}
+          />
         </div>
       </aside>
-    </div>
+  </div>
+  </div>
   );
 }
 

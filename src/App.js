@@ -25,6 +25,7 @@ const App = () => {
             <Link to="/Fees" className="button">Fees</Link>
             <Link to="/DogBoarding" className="button">Dog Boarding</Link>
             <Link to="/Shopping" className="button">Shop</Link>
+            <Link to="/FAQ" className="button">FAQ</Link>
             <Link to="/Booking" className="button gradient">Booking</Link>
             <button className="buttonPhone" onClick={()=>window.location.href='tel:07960482002'}>07960 482 002</button>
           </div>

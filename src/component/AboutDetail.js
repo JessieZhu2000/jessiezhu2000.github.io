@@ -48,8 +48,8 @@ const AboutDetail = () => {
     return (
         <section className='about'>
             <header className="about__hero">
-                <h1 className="about__title">Welcome to Cambridge Dog Walker</h1>
-                <p className="about__subtitle">One–to–one care. Trustworthy. Fully insured & DBS checked.</p>
+                <h1 className="about__title">Welcome – Cambridge dog walker focused on one–to–one care</h1>
+                <p className="about__subtitle">Trusted dog walker Cambridge UK offering individual walks, puppy visits and flexible pet sitting – fully insured & DBS checked.</p>
                 <Link className="about__cta" to="/booking">Book Now</Link>
             </header>
             <div className="about__carousel about__carousel--row" aria-live="polite">

@@ -30,8 +30,8 @@ const DogBoardingDetail = () => {
     return (
         <section className='dogboarding'>
             <header className='boardingHero'>
-                <h1 className='boardingTitle'>Dog Home Boarding</h1>
-                <p className='boardingSubtitle'>A calm, one–to–one home-from-home stay tailored to your dog’s routine.</p>
+                <h1 className='boardingTitle'>Cambridge dog boarding – personal home dog boarding Cambridge</h1>
+                <p className='boardingSubtitle'>A calm, insured dog walking Cambridge companion service by day and relaxed home-from-home overnight care—ideal for puppies and seniors.</p>
                 <Link className='boardingCta' to="/booking">Book Now</Link>
             </header>
             <ul

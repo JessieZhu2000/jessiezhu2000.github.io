@@ -14,6 +14,7 @@ import Fees from './pages/Fees';
 import DogBoarding from './pages/DogBoarding';
 import Booking from './pages/Booking';
 import Shopping from './pages/Shopping';
+import FAQPage from './pages/FAQPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +28,7 @@ root.render(
           <Route path="DogBoarding" element={<DogBoarding />} onEnter={() => window.location.reload()} />
           <Route path="Booking" element={<Booking />} onEnter={() => window.location.reload()} />
           <Route path="Shopping" element={<Shopping />} onEnter={() => window.location.reload()} />
+          <Route path="FAQ" element={<FAQPage />} onEnter={() => window.location.reload()} />
           <Route path="/*" element={<App /> } onEnter={() => window.location.reload()} />
         </Route>
     </Routes>

@@ -18,18 +18,16 @@
 
 .productBody { display:flex; flex-direction:column; gap:18px; padding:18px 20px 22px; flex:1; }
 .productDesc { margin:0; font-size:.8rem; line-height:1.5; color:#dcd9d7; }
-.productMeta { display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+.productMeta { display:flex; align-items:center; justify-content:flex-end; margin-top:auto; }
 .productPrice { font-size:.95rem; font-weight:600; color:#e79216; }
-.buyBtn { background:#e79216; color:#1e1e1e; text-decoration:none; font-weight:600; padding:10px 18px; border-radius:28px; font-size:.75rem; letter-spacing:.5px; box-shadow:0 4px 18px -4px rgba(230,117,20,.5); transition:background .25s, transform .25s; }
-.buyBtn:hover { background:#ff9d33; transform:translateY(-2px); }
-.buyBtn:active { transform:translateY(0); }
+/* buyBtn styles removed */
 
 @media (min-width:760px){
     .productDesc { font-size:.82rem; }
-    .buyBtn { font-size:.8rem; }
+    /* buyBtn removed */
 }
 @media (min-width:1160px){
     .productDesc { font-size:.85rem; }
-    .buyBtn { font-size:.85rem; }
+    /* buyBtn removed */
     .productGrid { gap:40px; }
 }

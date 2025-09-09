@@ -29,7 +29,7 @@ export function selectedServicesBreakdown(services){
   if(services.weeklyWalking){
     rows.push({ label:'Weekly walking plan', price:SERVICE_PRICES.WEEKLY_WALKING });
   } else if(services.walking){
-    rows.push({ label:'Dog walking (60 mins)', price:SERVICE_PRICES.WALKING });
+    rows.push({ label:'Dog walking (40 mins)', price:SERVICE_PRICES.WALKING });
   }
   if(services.boarding){ rows.push({ label:'Dog boarding (per day)', price:SERVICE_PRICES.BOARDING }); }
   if(services.catVisit){ rows.push({ label:'Cat / small pet visit', price:SERVICE_PRICES.CAT_VISIT }); }
