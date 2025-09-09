@@ -5,6 +5,7 @@ import logo from "./img/logo.png";
 
 const App = () => {
   const [scrolled,setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(()=>{
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener('scroll', onScroll, { passive:true });
@@ -15,11 +16,19 @@ const App = () => {
   return (
     <>
       <nav className={"header" + (scrolled?" scrolled":"") }>
-        <div className="navBar">
+        <div className={"navBar" + (menuOpen ? " menuOpen" : "") }>
           <Link to="/" className="navBrand">
             <img src={logo} alt="Cambridge Dog Walker" className="logo" />
           </Link>
-          <div className="buttonGroup">
+          <button
+            className="mobileToggle"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
+          <div className={"buttonGroup" + (menuOpen ? " open" : "") }>
             <Link to="/About" className="button">About</Link>
             <Link to="/Location" className="button">Location</Link>
             <Link to="/Fees" className="button">Fees</Link>
