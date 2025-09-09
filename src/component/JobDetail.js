@@ -18,7 +18,7 @@ const JobDetail = () => {
                 We will guide you to obtain the necessary paperwork. After the basic training, you can start to earn a commission straight away!
             </h2>
             <h2>
-                We look forward to welcoming you! <a href="mailto:dogwalkerclubs@gmail.com?subject=Job Enquiry">Contact us</a> Today!
+                We look forward to welcoming you! <a href="mailto:cambridgedogwalker@gmail.com?subject=Job Enquiry">Contact us</a> Today!
             </h2>
         </div>
     )

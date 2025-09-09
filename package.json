@@ -1,8 +1,8 @@
 {
-  "name": "dogwalkerclubs",
+  "name": "CambridgeDogWalker",
   "version": "0.1.4",
   "private": false,
-  "homepage": "https://dogwalkerclubs.com/",
+  "homepage": "https://CambridgeDogWalker.co.uk/",
   "dependencies": {
   "leaflet": "^1.9.4",
   "react-leaflet": "^4.2.1",

@@ -4,7 +4,7 @@ import '../css/FeesDetail.css'
 import { SERVICE_PRICES } from '../pricing';
 
 const FeeDetails = () => {
-    const email = "mailto:dogwalkerclubs@gmail.com?subject=Booking Enquiry"
+    const email = "mailto:cambridgedogwalker@gmail.com?subject=Booking Enquiry"
     return (
         <section className='priceSection'>
             <header className='priceHeader'>

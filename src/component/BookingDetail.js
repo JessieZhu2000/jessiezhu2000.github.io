@@ -134,7 +134,7 @@ const BookingDetail = () => {
         if (!validateStep(3)) { setStep(3); return; }
         const body = buildSummary();
         const subject = `Booking: ${formData.petName || 'Pet'}`;
-        window.location.href = `mailto:dogwalkerclubs@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:cambridgedogwalker@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         setFormData(prev => ({ ...prev, content: body }));
         setStep(4);
         setSent(true);
