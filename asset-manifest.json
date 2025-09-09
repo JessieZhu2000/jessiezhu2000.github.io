@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd6b697e.css",
-    "main.js": "/static/js/main.f12cd845.js",
-    "static/js/453.7b147c96.chunk.js": "/static/js/453.7b147c96.chunk.js",
+    "main.css": "/static/css/main.ea2aa330.css",
+    "main.js": "/static/js/main.ebb82f43.js",
+    "static/js/453.ab1e619a.chunk.js": "/static/js/453.ab1e619a.chunk.js",
     "static/media/fee.jpg": "/static/media/fee.551a2352577f8eb99b0b.jpg",
     "static/media/location.jpg": "/static/media/location.900d33e6da1cef66dfd3.jpg",
     "static/media/dogBoarding.jpg": "/static/media/dogBoarding.26492d3ce228350dd6f1.jpg",
     "static/media/about.jpg": "/static/media/about.34a3c079c84093749112.jpg",
     "static/media/booking.jpg": "/static/media/booking.30fdf72f3b1ea18cd3b9.jpg",
     "static/media/main.jpg": "/static/media/main.d66dba55989b83284f26.jpg",
-    "static/media/dogleash.png": "/static/media/dogleash.d086af90a724de9d4f92.png",
-    "static/media/poobag.jpeg": "/static/media/poobag.7edfc95bb1e7ec6fba0e.jpeg",
-    "static/media/poobagdispenser.jpeg": "/static/media/poobagdispenser.a301a07a7e9ad4f9638b.jpeg",
-    "static/media/dogcollar.jpeg": "/static/media/dogcollar.8c5e10a77564821d4026.jpeg",
-    "static/media/foodfeeder.jpeg": "/static/media/foodfeeder.7fabd0e3dd909db2c796.jpeg",
-    "static/media/pendant.jpeg": "/static/media/pendant.bc3a7e9738aee5ec5e96.jpeg",
-    "static/media/jumpingball.jpeg": "/static/media/jumpingball.f0b677a7f00a993443af.jpeg",
-    "static/media/logo.png": "/static/media/logo.d90a1d119823ec86986c.png",
+    "static/media/logo.png": "/static/media/logo.ce9071f1b3054f943e1b.png",
+    "static/media/Poobag.jpeg": "/static/media/Poobag.7edfc95bb1e7ec6fba0e.jpeg",
+    "static/media/Poobagdispenser.jpeg": "/static/media/Poobagdispenser.a301a07a7e9ad4f9638b.jpeg",
+    "static/media/DogCollar.jpeg": "/static/media/DogCollar.8c5e10a77564821d4026.jpeg",
+    "static/media/Foodfeeder.jpeg": "/static/media/Foodfeeder.7fabd0e3dd909db2c796.jpeg",
+    "static/media/Pendant.jpeg": "/static/media/Pendant.bc3a7e9738aee5ec5e96.jpeg",
+    "static/media/Jumpingball.jpeg": "/static/media/Jumpingball.f0b677a7f00a993443af.jpeg",
+    "static/media/DogLeash.jpeg": "/static/media/DogLeash.21f57dff8dd5b583cd85.jpeg",
     "index.html": "/index.html",
-    "main.dd6b697e.css.map": "/static/css/main.dd6b697e.css.map",
-    "main.f12cd845.js.map": "/static/js/main.f12cd845.js.map",
-    "453.7b147c96.chunk.js.map": "/static/js/453.7b147c96.chunk.js.map"
+    "main.ea2aa330.css.map": "/static/css/main.ea2aa330.css.map",
+    "main.ebb82f43.js.map": "/static/js/main.ebb82f43.js.map",
+    "453.ab1e619a.chunk.js.map": "/static/js/453.ab1e619a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd6b697e.css",
-    "static/js/main.f12cd845.js"
+    "static/css/main.ea2aa330.css",
+    "static/js/main.ebb82f43.js"
   ]
 }
