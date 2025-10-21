@@ -17,7 +17,7 @@ const Footer = () => {
           <a href="/Booking">Booking</a>
         </nav>
         <div className="siteFooter__contact">
-          <p><strong>Call:</strong> <a href="tel:07514434225">07514 434 225</a></p>
+          <p><strong>Call:</strong> <a href="tel:07960482002">07960 482 002</a></p>
           <p><strong>Email:</strong> <a href="mailto:trumpingtondogwalker@gmail.com">trumpingtondogwalker@gmail.com</a></p>
         </div>
       </div>

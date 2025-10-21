@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cambridgedogwalker.co.uk/sitemap.xml

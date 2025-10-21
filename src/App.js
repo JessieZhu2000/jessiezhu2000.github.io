@@ -36,7 +36,7 @@ const App = () => {
             <Link to="/Shopping" className="button">Shop</Link>
             <Link to="/FAQ" className="button">FAQ</Link>
             <Link to="/Booking" className="button gradient">Booking</Link>
-            <button className="buttonPhone" aria-label="Call 07514 434 225" onClick={()=>window.location.href='tel:07514434225'}>07514 434225</button>
+            <button className="buttonPhone" aria-label="Call 07960 482 002" onClick={()=>window.location.href='tel:07960482002'}>07960 482 002</button>
           </div>
         </div>
       </nav>
